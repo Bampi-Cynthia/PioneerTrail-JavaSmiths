@@ -6,6 +6,7 @@
 package pionnertrail;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,11 +16,40 @@ public class Game implements Serializable{
     // class instance variables
     private double totalTime;
     private int milesTraveled;
+    // relationships between classes
     private Player player;
-
+    private ArrayList<Actor> actors = new ArrayList<Actor>();
+    private Wagon wagon;
+    private Map map;
+    // dafault constructor
     public Game() {
     }
+    // getter and setter
 
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+    
+    public Wagon getWagon() {
+        return wagon;
+    }
+
+    public void setWagon(Wagon wagon) {
+        this.wagon = wagon;
+    }
+    
+    public ArrayList<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actor> actors) {
+        this.actors = actors;
+    }
+    
     public Player getPlayer() {
         return player;
     }

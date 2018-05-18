@@ -13,16 +13,16 @@ import java.util.Objects;
  * @author Cynthia
  */
 public class Wagon implements Serializable {
-   
+    //
     private String integrity;
     private int wheelsCount;
     private int capacity;
     
-    
-     public Wagon(){
+    //
+    public Wagon(){
          
 }
-
+     
     public String getIntegrity() {
         return integrity;
     }

@@ -19,13 +19,21 @@ public class Player implements Serializable{
     private double bestScore;
     private double totalDistTraveled;
     private int health;
-    //relationships
+    //relationships between classes
     private ArrayList<Game> games = new ArrayList<Game>();
     private Actor actor;
-
+    // default constructor
     public Player() {
     }
+    // setter and getter
+    public Actor getActor() {
+        return actor;
+    }
 
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+    
     public ArrayList<Game> getGames() {
         return games;
     }
