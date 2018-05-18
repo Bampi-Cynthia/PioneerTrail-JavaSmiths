@@ -19,7 +19,9 @@ public class Player implements Serializable{
     private double bestScore;
     private double totalDistTraveled;
     private int health;
+    //relationships
     private ArrayList<Game> games = new ArrayList<Game>();
+    private Actor actor;
 
     public Player() {
     }

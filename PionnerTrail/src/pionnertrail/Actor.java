@@ -6,6 +6,7 @@
 package pionnertrail;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -17,7 +18,8 @@ public class Actor implements Serializable{
     private String name;
     private int health;
     private int hunger;
-    
+    //relationships between classes
+    private ArrayList<Player> players = new ArrayList<Player>();
     public Actor(){
     }
     
