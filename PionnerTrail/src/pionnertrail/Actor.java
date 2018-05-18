@@ -4,15 +4,16 @@
  * and open the template in the editor.
  */
 package pionnertrail;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
 /**
- *
  * @author Isaias
  */
+
+//Actor class is a provisory one, because it should be an emum Class
+//but right now, we don't know how to work with it, especially with Point type
 public class Actor implements Serializable{
 
     private String name;
