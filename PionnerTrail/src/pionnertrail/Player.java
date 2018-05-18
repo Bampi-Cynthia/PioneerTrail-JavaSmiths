@@ -26,6 +26,7 @@ public class Player implements Serializable{
     public Player() {
     }
     // setter and getter
+    
     public Actor getActor() {
         return actor;
     }

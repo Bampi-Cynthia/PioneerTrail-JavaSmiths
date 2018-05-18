@@ -21,10 +21,13 @@ public class Actor implements Serializable{
     //relationships between classes
     private ArrayList<Player> players = new ArrayList<Player>();
     private Game game;
+    private Wagon wagon;
+    private Scene scene;
     // default constructor
     public Actor(){
     }
     // setter and getter
+    
     public void setname(String name) {
         this.name = name;
     }
