@@ -13,14 +13,43 @@ import java.util.Objects;
  * @author Isaias
  */
 public class Location implements Serializable{
-    
+    //atributes
     private int column;
     private int row;
     private String visited;
-    
+    //relationships between classes
+    private Wagon wagon;
+    private Scene scene;
+    private Map map;
+    // default constructor
     public Location(){
     }
+    // setter and getter
 
+    public Wagon getWagon() {
+        return wagon;
+    }
+
+    public void setWagon(Wagon wagon) {
+        this.wagon = wagon;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+    
     public int getColumn() {
         return column;
     }
