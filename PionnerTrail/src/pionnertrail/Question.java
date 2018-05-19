@@ -6,13 +6,14 @@
 package pionnertrail;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 /**
  * @author Elías
  */
 public class Question implements Serializable{
     
-    //atributes
+//atributes
     private String question;
     private String conrrectAnswer;
     private String answer1;
@@ -20,8 +21,20 @@ public class Question implements Serializable{
     private String answer3;
     private String answer4;
     
-    //default constructor
+//relationship with other classes
+    private ArrayList<Scene> scenes = new ArrayList<Scene>();
+    
+//default constructor
     public Question(){
+    }
+    
+//getters and setters for all the atributes
+    public ArrayList<Scene> getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(ArrayList<Scene> scenes) {
+        this.scenes = scenes;
     }
 
     public String getQuestion() {
