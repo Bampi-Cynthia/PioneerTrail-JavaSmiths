@@ -12,8 +12,7 @@ import java.util.Objects;
  * @author Isaias
  */
 
-//Actor class is a provisory one, because it should be an emum Class
-//but right now, we don't know how to work with it, especially with Point type
+//This class will be a normal Class by now
 public class Actor implements Serializable{
 
     private String name;

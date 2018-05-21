@@ -6,6 +6,7 @@
 package PioneerTrail.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -18,7 +19,46 @@ public class Scene implements Serializable {
     private String symbol;
     private String name;
     
+// relationship with other classes
+    private ArrayList<Location> locations = new ArrayList<Location>();
+    private ArrayList<Actor> actors = new ArrayList<Actor>();
+    private ArrayList<Question> questions = new ArrayList<Question>();
+    private ArrayList<Resource> resources = new ArrayList<Resource>();
+
+// default constructor
     public Scene(){
+}
+    //getters and setters for all the atributes
+    public ArrayList<Location> getLocations() {
+        return locations;
+    }
+
+    public void setLocations(ArrayList<Location> locations) {
+        this.locations = locations;
+    }
+
+    public ArrayList<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actor> actors) {
+        this.actors = actors;
+    }
+
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(ArrayList<Question> questions) {
+        this.questions = questions;
+    }
+
+    public ArrayList<Resource> getResources() {
+        return resources;
+    }
+
+    public void setResources(ArrayList<Resource> resources) {
+        this.resources = resources;
     }
 
     public String getDescription() {
