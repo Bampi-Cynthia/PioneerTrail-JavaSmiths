@@ -1,9 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pionnertrail;
+
+import PioneerTrail.model.Actor;
+import PioneerTrail.model.Game;
+import PioneerTrail.model.Location;
+import PioneerTrail.model.Map;
+import PioneerTrail.model.Player;
+import PioneerTrail.model.Question;
+import PioneerTrail.model.Resource;
+import PioneerTrail.model.Scene;
+import PioneerTrail.model.Wagon;
 
 /**
  *
@@ -11,11 +17,46 @@ package pionnertrail;
  */
 public class PionnerTrail {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
+         cynthia_test();
     }
+    
+    public static void cynthia_test(){
+        String[] testArray = {"test0","test1"};
+        
+        //Wagon test
+        Wagon wagonOne = new Wagon();
+        wagonOne.setIntegrity("test");
+        wagonOne.setWheelsCount(4);
+        wagonOne.setCapacity(150);
+        
+        System.out.println(wagonOne.getIntegrity());
+        System.out.println(wagonOne.getWheelsCount());
+        System.out.println(wagonOne.getCapacity());
+        
+        System.out.println(wagonOne.toString());
+        
+        
+        //Reource test
+        Resource resourceOne = new Resource();
+        resourceOne.setInventoryType(testArray);
+        resourceOne.setQuantity(20);
+        resourceOne.setName("Brad");
+        resourceOne.setRequireAmount(8);
+        resourceOne.setWeight(80);
+        
+        
+        System.out.println(resourceOne.getInventoryType());
+        System.out.println(resourceOne.getQuantity());
+        System.out.println(resourceOne.getName());
+        System.out.println(resourceOne.getRequireAmount());
+        System.out.println(resourceOne.getWeight());
+        
+        
+        System.out.println(resourceOne.toString());
+    }
+    
+    //Team member test function here
     
 }
