@@ -37,7 +37,6 @@ public class PionnerTrail {
         
         System.out.println(wagonOne.toString());
         
-        
         //Reource test
         Resource resourceOne = new Resource();
         resourceOne.setInventoryType(testArray);
@@ -52,9 +51,22 @@ public class PionnerTrail {
         System.out.println(resourceOne.getName());
         System.out.println(resourceOne.getRequireAmount());
         System.out.println(resourceOne.getWeight());
-        
-        
+                
         System.out.println(resourceOne.toString());
+        
+        //Player test
+        Player playerOne = new Player();
+        playerOne.setName("Pedro");
+        playerOne.setBestScore(250);
+        playerOne.setTotalDistTraveled(645);
+        playerOne.setHealth(70);
+        
+        System.out.println(playerOne.getName());
+        System.out.println(playerOne.getBestScore());
+        System.out.println(playerOne.getTotalDistTraveled());
+        System.out.println(playerOne.getHealth());
+        
+        System.out.println(playerOne.toString());
     }
     
     //Team member test function here
