@@ -67,6 +67,21 @@ public class PionnerTrail {
         System.out.println(playerOne.getHealth());
         
         System.out.println(playerOne.toString());
+        
+        //Scene test
+        Scene sceneOne = new Scene();
+        sceneOne.setDescription("What a lovely place");
+        sceneOne.setSymbol("**");
+        sceneOne.setName("Sugar Creek");
+        
+        System.out.println(sceneOne.getDescription());
+        System.out.println(sceneOne.getSymbol());
+        System.out.println(sceneOne.getName());
+        
+        System.out.println(sceneOne.toString());
+        
+        //
+        
     }
     
     //Team member test function here
