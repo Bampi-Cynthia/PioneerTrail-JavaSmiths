@@ -91,8 +91,29 @@ public class PionnerTrail {
         System.out.println(locationOne.getVisited());
         
         System.out.println(locationOne.toString());
-    }
     
     //Team member test function here
-    
+    //Actor test
+        Actor actorOne = new Actor();
+        //Don't know why the "name" in "setname" doesn't start in capital letter, like this "setName"
+        actorOne.setname("Gordon");
+        actorOne.setHealth(86);
+        actorOne.setHunger(25);
+        
+        System.out.println(actorOne.getName());
+        System.out.println(actorOne.getHealth());
+        System.out.println(actorOne.getHunger());
+        
+        System.out.println(actorOne.toString());
+        
+        //Game test
+        Game gameOne = new Game();
+        gameOne.setTotalTime(60);
+        gameOne.setMilesTraveled(460);
+        
+        System.out.println(gameOne.getTotalTime());
+        System.out.println(gameOne.getMilesTraveled());
+        
+        System.out.println(gameOne.toString());
+    }
 }
