@@ -80,8 +80,17 @@ public class PionnerTrail {
         
         System.out.println(sceneOne.toString());
         
-        //
+        //Location test
+        Location locationOne = new Location();
+        locationOne.setColumn(4);
+        locationOne.setRow(2);
+        locationOne.setVisited("Yes");
         
+        System.out.println(locationOne.getColumn());
+        System.out.println(locationOne.getRow());
+        System.out.println(locationOne.getVisited());
+        
+        System.out.println(locationOne.toString());
     }
     
     //Team member test function here
