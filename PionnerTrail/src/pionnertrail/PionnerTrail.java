@@ -91,7 +91,31 @@ public class PionnerTrail {
         System.out.println(locationOne.getVisited());
         
         System.out.println(locationOne.toString());
+        
+        //Map test
+        Map mapOne = new Map();
+        mapOne.setCoordinates(2, 0);
+        mapOne.setRowCount(3);
+        mapOne.setColumnCount(2);
+        
+        System.out.println(mapOne.getCoordinates());
+        System.out.println(mapOne.getRowCount());
+        System.out.println(mapOne.getColumnCount());
+        
+        System.out.println(mapOne.toString());
     
+        //Question test
+
+        Question questionOne = new Question();
+        questionOne.setQuestion("lolo?");
+        questionOne.setCorrectAnswer("ARRR!!!!");
+        questionOne.setAnswer1("puede ser");
+        questionOne.setAnswer2("sin duda");
+        questionOne.setAnswer3("no");
+        questionOne.setAnswer4("hay lindo tiempo hoy, no?");
+        
+        System.out.println(questionOne.toString());
+        
     //Team member test function here
     //Actor test
         Actor actorOne = new Actor();

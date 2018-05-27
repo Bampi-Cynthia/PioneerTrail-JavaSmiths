@@ -134,5 +134,10 @@ public class Question implements Serializable{
     public String toString() {
         return "Question{" + "question=" + question + ", conrrectAnswer=" + conrrectAnswer + ", answer1=" + answer1 + ", answer2=" + answer2 + ", answer3=" + answer3 + ", answer4=" + answer4 + '}';
     }
+//This method was created when testin the Map class
+    public void setCorrectAnswer(String sin_duda) {
+        //throw new method was commented to allow the test work
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     }
