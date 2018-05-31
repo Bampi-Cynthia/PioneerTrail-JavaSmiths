@@ -20,7 +20,7 @@ public class Scene implements Serializable {
     private String name;
     
 // relationship with other classes
-    private ArrayList<Location> locations = new ArrayList<Location>();
+  //  private ArrayList<Location> locations = new ArrayList<Location>();//Brother Jones said we can rid of it
     private ArrayList<Actor> actors = new ArrayList<Actor>();
     private ArrayList<Question> questions = new ArrayList<Question>();
     private ArrayList<Resource> resources = new ArrayList<Resource>();
@@ -29,13 +29,13 @@ public class Scene implements Serializable {
     public Scene(){
 }
     //getters and setters for all the atributes
-    public ArrayList<Location> getLocations() {
-        return locations;
-    }
-
-    public void setLocations(ArrayList<Location> locations) {
-        this.locations = locations;
-    }
+//    public ArrayList<Location> getLocations() {
+//        return locations;
+//    }
+//
+//    public void setLocations(ArrayList<Location> locations) {
+//        this.locations = locations;
+//    }
 
     public ArrayList<Actor> getActors() {
         return actors;

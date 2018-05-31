@@ -13,14 +13,15 @@ import java.util.Objects;
  * @author Cynthia
  */
 public class Wagon implements Serializable {
-    //
+    //attributes
     private String integrity;
     private int wheelsCount;
     private int capacity;
-    
-    //
-    public Wagon(){
-         
+    private int currentWeight; //I added this new attribute, and created getter and setter for it.
+
+    //default constructor
+    public Wagon(){   
+        
 }
      
     public String getIntegrity() {
@@ -46,7 +47,14 @@ public class Wagon implements Serializable {
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
+    public int getCurrentWeight() {
+        return currentWeight;
+    }
 
+    public void setCurrentWeight(int currentWeight) {
+        this.currentWeight = currentWeight;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 3;

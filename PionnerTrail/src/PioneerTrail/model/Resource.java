@@ -18,12 +18,12 @@ public class Resource implements Serializable {
     
     private String[] inventoryType;
     private int quantity;
-    private int requireAmount;
+    private int requireAmount;//questionable attribute
     private String name;
     private int weight;
 //relationships with other classes
-    private Wagon wagon;
-    private ArrayList<Scene>scenes = new ArrayList<Scene>();
+  //  private Wagon wagon;//Brother Jones said we can rid of it
+  //  private ArrayList<Scene>scenes = new ArrayList<Scene>();//Brother Jones said we can rid of it
 // default constructor
     public Resource(){
 }
@@ -32,21 +32,21 @@ public class Resource implements Serializable {
         return inventoryType;
     }
 
-    public Wagon getWagon() {
-        return wagon;
-    }
-
-    public void setWagon(Wagon wagon) {
-        this.wagon = wagon;
-    }
-
-    public ArrayList<Scene> getScenes() {
-        return scenes;
-    }
-
-    public void setScenes(ArrayList<Scene> scenes) {
-        this.scenes = scenes;
-    }
+//    public Wagon getWagon() {
+//        return wagon;
+//    }
+//
+//    public void setWagon(Wagon wagon) {
+//        this.wagon = wagon;
+//    }
+//
+//    public ArrayList<Scene> getScenes() {
+//        return scenes;
+//    }
+//
+//    public void setScenes(ArrayList<Scene> scenes) {
+//        this.scenes = scenes;
+//    }
 
     public void setInventoryType(String[] inventoryType) {
         this.inventoryType = inventoryType;
