@@ -18,6 +18,7 @@ public class Wagon implements Serializable {
     private int wheelsCount;
     private int capacity;
     private int currentWeight; //I added this new attribute, and created getter and setter for it.
+    
 
     //default constructor
     public Wagon(){   
@@ -54,6 +55,10 @@ public class Wagon implements Serializable {
     public void setCurrentWeight(int currentWeight) {
         this.currentWeight = currentWeight;
     }
+
+    
+    
+    
     
     @Override
     public int hashCode() {
