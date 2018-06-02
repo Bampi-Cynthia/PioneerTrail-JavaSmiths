@@ -30,5 +30,23 @@ public class WagonControl {
         }
         return (resource.getQuantity() * resource.getWeight() + wagon.getCurrentWeight());
     }
+        //Individual assignment - Elías Monzón
+        public static int calculateFoodAmount(int actorsAlive, int currentFoodAmount, int maxFoodAmount, int actorFoodConsumption){
+            
+            if(actorsAlive == 0){
+                return -1;
+            }
+            if(currentFoodAmount > maxFoodAmount){
+                return -2;
+            }
+            if(currentFoodAmount < 0){
+                return -3;
+            }
+            if(actorFoodConsumption * actorsAlive > currentFoodAmount){
+                return -4;
+            }
+            
+            return (currentFoodAmount - actorFoodConsumption * actorsAlive);
+}
     
 }

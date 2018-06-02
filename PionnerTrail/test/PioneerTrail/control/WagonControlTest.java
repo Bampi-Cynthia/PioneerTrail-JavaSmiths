@@ -113,5 +113,88 @@ public class WagonControlTest {
         System.out.println("Return value = " + result);
         assertEquals(expResult, result);
     }
+
+    /**
+     * Test of calculateFoodAmount method, of class WagonControl.
+     */
+    @Test
+    public void testCalculateFoodAmount() {
+        System.out.println("calculateFoodAmount VALIDATE CASE");
+     
+        int actorsAlive = 4;
+        int currentFoodAmount = 80;
+        int maxFoodAmount = 100;
+        int actorFoodConsumption = 10;
+        int expResult = 40;
+        int result = WagonControl.calculateFoodAmount(actorsAlive, currentFoodAmount, maxFoodAmount, actorFoodConsumption);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("INVALID CASE 1");
+        
+        actorsAlive = 0;
+        currentFoodAmount = 80;
+        maxFoodAmount = 100;
+        actorFoodConsumption = 10;
+        expResult = -1;
+        result = WagonControl.calculateFoodAmount(actorsAlive, currentFoodAmount, maxFoodAmount, actorFoodConsumption);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("INVALID CASE 2");
+        
+        actorsAlive = 4;
+        currentFoodAmount = 120;
+        maxFoodAmount = 100;
+        actorFoodConsumption = 10;
+        expResult = -2;
+        result = WagonControl.calculateFoodAmount(actorsAlive, currentFoodAmount, maxFoodAmount, actorFoodConsumption);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("INVALID CASE 3");
+        
+        actorsAlive = 4;
+        currentFoodAmount = -1;
+        maxFoodAmount = 100;
+        actorFoodConsumption = 10;
+        expResult = -3;
+        result = WagonControl.calculateFoodAmount(actorsAlive, currentFoodAmount, maxFoodAmount, actorFoodConsumption);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("INVALID CASE 4");
+        
+        actorsAlive = 4;
+        currentFoodAmount = 10;
+        maxFoodAmount = 100;
+        actorFoodConsumption = 10;
+        expResult = -4;
+        result = WagonControl.calculateFoodAmount(actorsAlive, currentFoodAmount, maxFoodAmount, actorFoodConsumption);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("BOUNDARY CASE 1");
+        
+        actorsAlive = 5;
+        currentFoodAmount = 100;
+        maxFoodAmount = 100;
+        actorFoodConsumption = 20;
+        expResult = 0;
+        result = WagonControl.calculateFoodAmount(actorsAlive, currentFoodAmount, maxFoodAmount, actorFoodConsumption);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("BOUNDARY CASE 2");
+        
+        actorsAlive = 1;
+        currentFoodAmount = 1;
+        maxFoodAmount = 100;
+        actorFoodConsumption = 1;
+        expResult = 0;
+        result = WagonControl.calculateFoodAmount(actorsAlive, currentFoodAmount, maxFoodAmount, actorFoodConsumption);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+    }
     
 }
