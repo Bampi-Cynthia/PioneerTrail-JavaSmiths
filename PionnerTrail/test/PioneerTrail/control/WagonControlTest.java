@@ -5,6 +5,7 @@
  */
 package PioneerTrail.control;
 
+import PioneerTrail.model.Game;
 import PioneerTrail.model.Resource;
 import PioneerTrail.model.Wagon;
 import org.junit.After;
@@ -193,6 +194,68 @@ public class WagonControlTest {
         actorFoodConsumption = 1;
         expResult = 0;
         result = WagonControl.calculateFoodAmount(actorsAlive, currentFoodAmount, maxFoodAmount, actorFoodConsumption);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of calculateWagonCurrentIntegrity method, of class WagonControl.
+     */
+    @Test
+    public void testCalculateWagonCurrentIntegrity() {
+        System.out.println("calculateWagonCurrentIntegrity VALID CASE");
+        Wagon wagon = new Wagon();
+        Game game = new Game();
+        wagon.setIntegrity(90);
+        game.setMilesTraveled(200);
+        int maxIntegrity = 100;
+        int expResult = 70;
+        int result = WagonControl.calculateWagonCurrentIntegrity(wagon, game, maxIntegrity);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("INVALID CASE 1");
+        wagon.setIntegrity(-1);
+        game.setMilesTraveled(200);
+        maxIntegrity = 100;
+        expResult = -1;
+        result = WagonControl.calculateWagonCurrentIntegrity(wagon, game, maxIntegrity);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("INVALID CASE 2");
+        wagon.setIntegrity(100);
+        game.setMilesTraveled(-1);
+        maxIntegrity = 100;
+        expResult = -2;
+        result = WagonControl.calculateWagonCurrentIntegrity(wagon, game, maxIntegrity);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("INVALID CASE 3");
+        wagon.setIntegrity(13);
+        game.setMilesTraveled(200);
+        maxIntegrity = 100;
+        expResult = -3;
+        result = WagonControl.calculateWagonCurrentIntegrity(wagon, game, maxIntegrity);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("BOUDARY CASE 1");
+        wagon.setIntegrity(1);
+        game.setMilesTraveled(10);
+        maxIntegrity = 100;
+        expResult = 0;
+        result = WagonControl.calculateWagonCurrentIntegrity(wagon, game, maxIntegrity);
+        System.out.println("Return value = " + result);
+        assertEquals(expResult, result);
+        
+        System.out.println("BOUDARY CASE 2");
+        wagon.setIntegrity(100);
+        game.setMilesTraveled(1000);
+        maxIntegrity = 100;
+        expResult = 0;
+        result = WagonControl.calculateWagonCurrentIntegrity(wagon, game, maxIntegrity);
         System.out.println("Return value = " + result);
         assertEquals(expResult, result);
     }

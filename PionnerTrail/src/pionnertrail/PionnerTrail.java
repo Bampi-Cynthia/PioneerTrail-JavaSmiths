@@ -28,9 +28,11 @@ public class PionnerTrail {
 
         //Wagon test
         Wagon wagonOne = new Wagon();
-        wagonOne.setIntegrity("test");
+        wagonOne.setIntegrityLabel("test");
         wagonOne.setWheelsCount(4);
         wagonOne.setCapacity(150);
+        
+        System.out.println(wagonOne.getIntegrityLabel());
 
         System.out.println(wagonOne.getIntegrity());
         System.out.println(wagonOne.getWheelsCount());

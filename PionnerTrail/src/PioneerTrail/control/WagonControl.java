@@ -5,6 +5,7 @@
  */
 package PioneerTrail.control;
 
+import PioneerTrail.model.Game;
 import PioneerTrail.model.Resource;
 import PioneerTrail.model.Wagon;
 
@@ -48,5 +49,22 @@ public class WagonControl {
             
             return (currentFoodAmount - actorFoodConsumption * actorsAlive);
 }
-    
+        //Individual assignment - Isaias Monzon
+        public static int calculateWagonCurrentIntegrity(Wagon wagon, Game game, int maxIntegrity){
+        if (wagon.getIntegrity()< 0 || wagon.getIntegrity() > 100){
+            return -1;
+        }
+        if (game.getMilesTraveled() < 0){
+            return -2;
+        }
+        if (game.getMilesTraveled() / 10 > wagon.getIntegrity()){
+            return -3;
+        }
+        if (maxIntegrity < wagon.getIntegrity()){
+            return -4;
+        }
+        return (wagon.getIntegrity() - game.getMilesTraveled() / 10);
+        
+        }
 }
+        

@@ -14,7 +14,8 @@ import java.util.Objects;
  */
 public class Wagon implements Serializable {
     //attributes
-    private String integrity;
+    private String integrityLabel;
+    private int integrity;
     private int wheelsCount;
     private int capacity;
     private int currentWeight; //I added this new attribute, and created getter and setter for it.
@@ -24,13 +25,21 @@ public class Wagon implements Serializable {
     public Wagon(){   
         
 }
-     
-    public String getIntegrity() {
+
+    public int getIntegrity() {
         return integrity;
     }
 
-    public void setIntegrity(String integrity) {
+    public void setIntegrity(int integrity) {
         this.integrity = integrity;
+    }
+     
+    public String getIntegrityLabel() {
+        return integrityLabel;
+    }
+
+    public void setIntegrityLabel(String integrityLabel) {
+        this.integrityLabel = integrityLabel;
     }
 
     public int getWheelsCount() {
@@ -63,7 +72,7 @@ public class Wagon implements Serializable {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 19 * hash + Objects.hashCode(this.integrity);
+        hash = 19 * hash + Objects.hashCode(this.integrityLabel);
         hash = 19 * hash + this.wheelsCount;
         hash = 19 * hash + this.capacity;
         return hash;
@@ -87,7 +96,7 @@ public class Wagon implements Serializable {
         if (this.capacity != other.capacity) {
             return false;
         }
-        if (!Objects.equals(this.integrity, other.integrity)) {
+        if (!Objects.equals(this.integrityLabel, other.integrityLabel)) {
             return false;
         }
         return true;
@@ -95,7 +104,7 @@ public class Wagon implements Serializable {
 
     @Override
     public String toString() {
-        return "Wagon{" + "integrity=" + integrity + ", wheelsCount=" + wheelsCount + ", capacity=" + capacity + '}';
+        return "Wagon{" + "integrity=" + integrityLabel + ", wheelsCount=" + wheelsCount + ", capacity=" + capacity + '}';
     }
      
 }
