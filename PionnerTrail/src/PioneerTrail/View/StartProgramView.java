@@ -5,6 +5,8 @@
  */
 package PioneerTrail.View;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Elías
@@ -29,10 +31,22 @@ public class StartProgramView {
     }
 
     private String[] getInputs() {
-        System.out.println("***getInputs() called ***");
-        String[] inputs = new String[1];
+        Scanner scan;
+        scan = new Scanner(System.in);
 
-        inputs[0] = "testInput";
+        String[] inputs = new String[1];
+        System.out.println("***Welcome to Pionner Trail***\"\\t\" In this game you will lead a pioneer wagon through the plains of USA in the second half of the XIX century");
+        boolean valid = false;
+        while (valid == false) {
+            System.out.println("Please, enter your name");
+            inputs[0] = scan.nextLine();
+            inputs[0] = inputs[0].trim();
+            if (inputs[0].length() < 1) {
+                System.out.println("You must enter a non-blank value");
+                continue;
+            }
+            valid = true;
+        }
         return inputs;
 
     }
