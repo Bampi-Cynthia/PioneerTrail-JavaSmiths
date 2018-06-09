@@ -37,7 +37,7 @@ public class StartProgramView {
         scan = new Scanner(System.in);
 
         String[] inputs = new String[1];
-        System.out.println("***Welcome to Pionner Trail***\"\t In this game you will lead a pioneer wagon through the plains of USA in the second half of the XIX century");
+        System.out.println("***Welcome to Pionner Trail***\n***In this game you will lead a pioneer wagon***\n***through the plains of USA in the second half of the XIX Century***");
         boolean valid = false;
         while (valid == false) {
             System.out.println("Please, enter your name");
@@ -57,7 +57,12 @@ public class StartProgramView {
         String playersName = inputs[0];
         Player player = GameControl.savePlayer(playersName);
         //System.out.println("***\"Save game is not implemented yet.\"***");
-        System.out.println("=============================\n "+ "Welcome to the game " + playersName + "\n We hope you have a lot of fun!\n" + "================================");
+        System.out.println(
+                "===============================\n "
+                + "Welcome to the game " + playersName.toUpperCase()
+                + "\n We hope you have a lot of fun!\n" 
+                + "==============================="
+        );
       MainMenuView mainMenuView = new MainMenuView();
       mainMenuView.display();  
         return true;

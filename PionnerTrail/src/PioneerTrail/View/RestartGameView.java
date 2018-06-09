@@ -14,5 +14,5 @@ class RestartGameView {
     public RestartGameView() {
     }
     public void display(){
-    System.out.println("***Restart Game View***");}
+    System.out.println("***Restart Game View called***");}
 }

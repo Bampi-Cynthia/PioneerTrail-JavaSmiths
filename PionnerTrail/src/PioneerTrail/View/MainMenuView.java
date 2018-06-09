@@ -85,7 +85,6 @@ class MainMenuView {
     private void startNewGame() {
         System.out.println("Start a new Game selected");
         Game game = new Game();
-        //falta algo acá de las primeras lineas de la página 29
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
         GameControl.createNewGame(PionnerTrail.getPlayer());
