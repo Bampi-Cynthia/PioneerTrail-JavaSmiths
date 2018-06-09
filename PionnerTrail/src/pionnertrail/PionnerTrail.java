@@ -16,13 +16,33 @@ import PioneerTrail.model.Wagon;
  * @author tcbam_000
  */
 public class PionnerTrail {
+    //attributes
+    private static Game currentGame = null;
+    private static Player player = null;
 
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        PionnerTrail.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        PionnerTrail.player = player;
+    }
+    //MAIN METHOD OF THE MAIN CLASS
     public static void main(String[] args) {
-        //       cynthia_test();
+        
+//FROM THE VIEW LAYER
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
     }
-
+    
     public static void cynthia_test() {
         String[] testArray = {"test0", "test1"};
 

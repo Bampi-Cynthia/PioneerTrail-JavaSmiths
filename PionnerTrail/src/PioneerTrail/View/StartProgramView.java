@@ -5,6 +5,8 @@
  */
 package PioneerTrail.View;
 
+import PioneerTrail.control.GameControl; // experimenting
+import PioneerTrail.model.Player; // experimenting
 import java.util.Scanner;
 
 /**
@@ -35,7 +37,7 @@ public class StartProgramView {
         scan = new Scanner(System.in);
 
         String[] inputs = new String[1];
-        System.out.println("***Welcome to Pionner Trail***\"\\t\" In this game you will lead a pioneer wagon through the plains of USA in the second half of the XIX century");
+        System.out.println("***Welcome to Pionner Trail***\"\t In this game you will lead a pioneer wagon through the plains of USA in the second half of the XIX century");
         boolean valid = false;
         while (valid == false) {
             System.out.println("Please, enter your name");
@@ -52,8 +54,12 @@ public class StartProgramView {
     }
 
     private boolean doAction(String[] inputs) {
-        System.out.println("***doAction() called ***");
-        System.out.println("\tinputs = " + inputs[0]);
+        String playersName = inputs[0];
+        Player player = GameControl.savePlayer(playersName);
+        //System.out.println("***\"Save game is not implemented yet.\"***");
+        System.out.println("=============================\n "+ "Welcome to the game " + playersName + "\n We hope you have a lot of fun!\n" + "================================");
+      MainMenuView mainMenuView = new MainMenuView();
+      mainMenuView.display();  
         return true;
     }
 }
