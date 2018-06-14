@@ -25,7 +25,7 @@ public class MapControl {
         }
     }
     public Point getCurrentLoction(){
-        //map.setCoordinates(1,3); //testing purposes
+        map.setCoordinates(1,3); //testing purposes
         return map.getCoordinates();
     }
     

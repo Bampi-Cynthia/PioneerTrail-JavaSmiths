@@ -16,19 +16,22 @@ import java.util.Objects;
  */
 public class Resource implements Serializable {
     
-    private String[] inventoryType;
+    private String inventoryType;
     private int quantity;
-    private int requireAmount;//questionable attribute
     private String name;
     private int weight;
 //relationships with other classes
   //  private Wagon wagon;//Brother Jones said we can rid of it
   //  private ArrayList<Scene>scenes = new ArrayList<Scene>();//Brother Jones said we can rid of it
 // default constructor
-    public Resource(){
+    public Resource(String inventoryType, int quantity,String name,int weight ){
+        this.inventoryType =  inventoryType;
+        this.quantity = quantity;
+        this.name = name;
+        this.weight = weight;
 }
 
-    public String[] getInventoryType() {
+    public String getInventoryType() {
         return inventoryType;
     }
 
@@ -48,7 +51,7 @@ public class Resource implements Serializable {
 //        this.scenes = scenes;
 //    }
 
-    public void setInventoryType(String[] inventoryType) {
+    public void setInventoryType(String inventoryType) {
         this.inventoryType = inventoryType;
     }
 
@@ -58,14 +61,6 @@ public class Resource implements Serializable {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public int getRequireAmount() {
-        return requireAmount;
-    }
-
-    public void setRequireAmount(int requireAmount) {
-        this.requireAmount = requireAmount;
     }
 
     public String getName() {
@@ -85,46 +80,8 @@ public class Resource implements Serializable {
     }
 
     @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Arrays.deepHashCode(this.inventoryType);
-        hash = 89 * hash + this.quantity;
-        hash = 89 * hash + this.requireAmount;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + this.weight;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Resource other = (Resource) obj;
-        if (this.quantity != other.quantity) {
-            return false;
-        }
-        if (this.requireAmount != other.requireAmount) {
-            return false;
-        }
-        if (this.weight != other.weight) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return Arrays.deepEquals(this.inventoryType, other.inventoryType);
-    }
-
-    @Override
     public String toString() {
-        return "Resource{" + "inventoryType=" + inventoryType + ", quantity=" + quantity + ", requireAmount=" + requireAmount + ", name=" + name + ", weight=" + weight + '}';
+        return "Resource{" + "inventoryType=" + inventoryType + ", quantity=" + quantity  + ", name=" + name + ", weight=" + weight + '}';
     }
     
 }
