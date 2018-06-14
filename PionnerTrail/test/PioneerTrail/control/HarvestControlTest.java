@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author tcbam_000
+ * @author Cynthia
  */
 public class HarvestControlTest {
     

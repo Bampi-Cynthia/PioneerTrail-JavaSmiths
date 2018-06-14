@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package PioneerTrail.control;
 
+import PioneerTrail.model.Game;
 import PioneerTrail.model.Player;
-import pionnertrail.PionnerTrail;
+import pionnertrail.PioneerTrail;
+
 
 /*
  * @author Elías
@@ -18,9 +16,12 @@ public class GameControl {
         }
         Player player = new Player();
         player.setName(name);
-        PionnerTrail.setPlayer(player); 
+        PioneerTrail.setPlayer(player); 
         return player;
     }
-    public static void createNewGame(Player player){
-        System.out.println("***Create New Game called***");}
+    public static void createNewGame(){
+        System.out.println("***Create New Game called***");
+        Game game = new Game();
+        PioneerTrail.setCurrentGame(game);
+    }  
 }

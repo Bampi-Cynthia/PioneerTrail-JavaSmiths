@@ -15,7 +15,7 @@ import PioneerTrail.model.Wagon;
  *
  * @author tcbam_000
  */
-public class PionnerTrail {
+public class PioneerTrail {
     //attributes
     private static Game currentGame = null;
     private static Player player = null;
@@ -25,7 +25,7 @@ public class PionnerTrail {
     }
 
     public static void setCurrentGame(Game currentGame) {
-        PionnerTrail.currentGame = currentGame;
+        PioneerTrail.currentGame = currentGame;
     }
 
     public static Player getPlayer() {
@@ -33,7 +33,7 @@ public class PionnerTrail {
     }
 
     public static void setPlayer(Player player) {
-        PionnerTrail.player = player;
+        PioneerTrail.player = player;
     }
     //MAIN METHOD OF THE MAIN CLASS
     public static void main(String[] args) {

@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package PioneerTrail.View;
 
 import PioneerTrail.control.GameControl;
 import PioneerTrail.model.Game;
 import PioneerTrail.model.Player;
-import pionnertrail.PionnerTrail;
+import pionnertrail.PioneerTrail;
 import java.util.Scanner;
 
 /**
@@ -84,10 +80,9 @@ class MainMenuView {
 
     private void startNewGame() {
         System.out.println("Start a new Game selected");
-        Game game = new Game();
+        GameControl.createNewGame();
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
-        GameControl.createNewGame(PionnerTrail.getPlayer());
     }
 
     private void restartGame() {

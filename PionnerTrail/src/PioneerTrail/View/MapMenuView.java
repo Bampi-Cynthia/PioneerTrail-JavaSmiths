@@ -35,8 +35,8 @@ public MapMenuView() {
                 "===============================\n"
                 + "            Map Menu          \n"
                 + "===============================\n"
-                + "C - What is the goal of the game?\n"
-                + "M - How to move\n"
+                + "D - Display Map\n"    
+                + "M - Move Menu view\n"
                 + "Q - Quit");
 
         boolean valid = false;
@@ -58,14 +58,12 @@ public MapMenuView() {
 
         String menuItem = inputs[0].toUpperCase();
         switch (menuItem) {
-            case "C":
-                getCurrentLocation();
+            case "D":
+               DisplayMap(); 
                 break;
             case "M":
                 moveToNewLocation();
                 break;
-            case "Q":
-                return true;
             default:
                 System.out.println("Invalid map menu item");
                 break;
@@ -73,12 +71,17 @@ public MapMenuView() {
         return false;
     }
 
-    private void getCurrentLocation() {
-        MapControl. getCurrentLoction();
+    private void getCurrentLoction() {
+       
     }
 
     private void moveToNewLocation() {
-        
+        MoveLocationView movemenu = new MoveLocationView();
+        movemenu.Display();
+    }
+
+    private void DisplayMap() {
+       System.out.println("This part will be built along the course ");
     }
     
     

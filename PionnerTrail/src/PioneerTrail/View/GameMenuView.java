@@ -18,8 +18,5 @@ class GameMenuView {
     public void display(){
         System.out.println("***Game Menu View called***");
     }
-    public static void createNewGame(Player player){
-        System.out.println("***Create New Game called***");
-                
-    }
+    
 }
