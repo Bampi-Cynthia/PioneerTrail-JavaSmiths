@@ -16,8 +16,8 @@ public enum Actor implements Serializable{
 
     private final String name;
     private final String description;
-    private final int health;
-    private final int hunger;
+    private int health;
+    private int hunger;
 
 Actor(String name, String description, int health, int hunger){
 this.name = name;
