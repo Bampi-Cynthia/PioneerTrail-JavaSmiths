@@ -76,7 +76,7 @@ public class ResourceView {
     }
 
     private void displayResourceList() {
-        Resource[] list = sendList();
+        //Resource[] list = sendList();
     }
 }
    

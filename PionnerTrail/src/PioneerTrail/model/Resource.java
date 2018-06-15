@@ -31,6 +31,9 @@ public class Resource implements Serializable {
         this.weight = weight;
 }
 
+    public Resource() {
+    }
+
     public String getInventoryType() {
         return inventoryType;
     }

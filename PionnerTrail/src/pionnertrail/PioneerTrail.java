@@ -62,16 +62,16 @@ public class PioneerTrail {
 
         //Reource test
         Resource resourceOne = new Resource();
-        resourceOne.setInventoryType(testArray);
+        //resourceOne.setInventoryType(testArray);
         resourceOne.setQuantity(20);
         resourceOne.setName("Brad");
-        resourceOne.setRequireAmount(8);
+        //resourceOne.setRequireAmount(8);
         resourceOne.setWeight(80);
 
         System.out.println(resourceOne.getInventoryType());
         System.out.println(resourceOne.getQuantity());
         System.out.println(resourceOne.getName());
-        System.out.println(resourceOne.getRequireAmount());
+        //System.out.println(resourceOne.getRequireAmount());
         System.out.println(resourceOne.getWeight());
 
         System.out.println(resourceOne.toString());
