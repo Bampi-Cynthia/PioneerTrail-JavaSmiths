@@ -139,17 +139,18 @@ public class PioneerTrail {
 
         //Team member test function here
         //Actor test
-        Actor actorOne = new Actor();
         //Don't know why the "name" in "setname" doesn't start in capital letter, like this "setName"
-        actorOne.setname("Gordon");
-        actorOne.setHealth(86);
-        actorOne.setHunger(25);
-
-        System.out.println(actorOne.getName());
-        System.out.println(actorOne.getHealth());
-        System.out.println(actorOne.getHunger());
-
-        System.out.println(actorOne.toString());
+        Actor.Father.setHealth(7);
+        Actor.Mother.setHealth(9);
+        Actor.John.setHealth(5);
+        Actor.Maria.setHunger(3);
+        Actor.Jimmy.setHunger(0);
+        
+        System.out.println(Actor.Father.getHealth());
+        System.out.println(Actor.Mother.getHealth());
+        System.out.println(Actor.John.getHealth());
+        System.out.println(Actor.Maria.getHunger());
+        System.out.println(Actor.Jimmy.getHunger());
 
         //Game test
         Game gameOne = new Game();
