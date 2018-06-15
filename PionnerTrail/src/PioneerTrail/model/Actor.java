@@ -37,9 +37,17 @@ this.hunger = hunger;
     public int getHealth() {
         return health;
     }
-
+    
+    public void setHealth(int health) {
+        this.health = health;
+    }
+    
     public int getHunger() {
         return hunger;
+    }
+
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
     }
 
     @Override
