@@ -33,7 +33,7 @@ public class HarvestControlTest {
      */
     @Test
     public void testCalculateWood() {
-        System.out.println("calculateWood");
+        System.out.println("Valid Case");
         Player player = new Player();
         player.setTotalDistTraveled(2);
         int initialWood = 80;
