@@ -9,60 +9,73 @@ import java.util.Scanner;
 
 /**
  *
- * @author Elías
+ * @author Cynthia
  */
-class HelpMenuView {
+public class HelpMenuView extends View{
 
     public HelpMenuView() {
-    }
-
-    public void display() {
-        boolean endOfView = false;
-        String[] inputs;
-        do {
-            inputs = this.getInputs();
-            if (inputs[0] == null || inputs[0].length() < 1 || inputs[0].toUpperCase().equals("Q")) {
-                return;
-            }
-
-            endOfView = doAction(inputs);
-        } while (endOfView != true);
-
-    }
-
-    private String[] getInputs() {
-        Scanner scan;
-        scan = new Scanner(System.in);
-
-        String[] inputs = new String[1];
-        System.out.println(
-                "===============================\n"
+   super(
+           "===============================\n"
                 + "            Help Menu          \n"
                 + "===============================\n"
                 + "G - What is the goal of the game?\n"
                 + "M - How to move\n"
                 + "E - Estimate the number of resources\n"
                 + "H - Harvest resources\n"
-                + "Q - Quit");
-
-        boolean valid = false;
-        while (valid == false) {
-            System.out.println("Please, enter your choice");
-            inputs[0] = scan.nextLine();
-            inputs[0] = inputs[0].trim();
-            if (inputs[0].length() < 1) {
-                System.out.println("You must enter a non-blank value");
-                continue;
-            }
-            valid = true;
-        }
-        return inputs;
-
+                + "Q - Quit\n" 
+                + "Please, Make a choice:\n");
     }
+    
 
-    private boolean doAction(String[] inputs) {
+    
+//    public void display() {
+//        boolean endOfView = false;
+//        String inputs;
+//        do {
+//            inputs = this.getInputs();
+//            if (inputs == null || inputs.length() < 1 || inputs.toUpperCase().equals("Q")) {
+//                return;
+//            }
+//
+//            endOfView = doAction(inputs);
+//        } while (endOfView != true);
+//
+//    }
 
-        String menuItem = inputs[0].toUpperCase();
+//    private String[] getInputs() {
+//        Scanner scan;
+//        scan = new Scanner(System.in);
+//
+//        String[] inputs = new String[1];
+//        System.out.println(
+//                "===============================\n"
+//                + "            Help Menu          \n"
+//                + "===============================\n"
+//                + "G - What is the goal of the game?\n"
+//                + "M - How to move\n"
+//                + "E - Estimate the number of resources\n"
+//                + "H - Harvest resources\n"
+//                + "Q - Quit\n");
+//    }
+        
+//      boolean valid = false;
+//        while (valid == false) {
+//            System.out.println("Please, enter your choice");
+//            inputs = scan.nextLine();
+//            inputs = inputs.trim();
+//            if (inputs.length() < 1) {
+//                System.out.println("You must enter a non-blank value");
+//                continue;
+//            }
+//            valid = true;
+//        }
+//      return inputs;
+//
+//  }
+@Override
+    public boolean doAction(String inputs) {
+        
+        String menuItem = inputs.toUpperCase();
         switch (menuItem) {
             case "G":
                 description();

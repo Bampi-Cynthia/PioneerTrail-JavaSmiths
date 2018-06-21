@@ -86,7 +86,8 @@ class GameMenuView {
     }
 
     private void ViewMap() {
-        System.out.println("ViewMap is not implemented yet");
+        MapMenuView mapMenuView = new MapMenuView();
+        mapMenuView.display();
     }
 
     private void ViewResources() {
