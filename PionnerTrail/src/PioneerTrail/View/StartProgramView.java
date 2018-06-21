@@ -5,7 +5,6 @@ import PioneerTrail.control.GameControl; // experimenting
 import PioneerTrail.model.Player; // experimenting
 
 /**
- *
  * @author Elías
  */
 public class StartProgramView extends View{
