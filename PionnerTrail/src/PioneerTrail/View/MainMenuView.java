@@ -2,63 +2,28 @@
 package PioneerTrail.View;
 
 import PioneerTrail.control.GameControl;
-import PioneerTrail.model.Game;
-import PioneerTrail.model.Player;
-import pionnertrail.PioneerTrail;
-import java.util.Scanner;
 
 /**
- *
  * @author Elías
  */
-class MainMenuView {
 
-    public void display() {
-        boolean endOfView = false;
-        String[] inputs;
-        do {
-            inputs = this.getInputs();
-            if (inputs[0] == null || inputs[0].length() < 1 || inputs[0].toUpperCase().equals("Q")) {
-                return;
-            }
-
-            endOfView = doAction(inputs);
-        } while (endOfView != true);
-
+public class MainMenuView extends View{
+    
+    public MainMenuView(){
+        super("===============================\n"
+            + "            Main Menu          \n"
+            + "===============================\n"
+            + "N - Start new game\n"
+            + "R - Restart existing game\n"
+            + "H - Get help on how to play the game\n"
+            + "E - Exit \n"
+            + "Please, make a choice: \n");
     }
+    
+    @Override
+    public boolean doAction(String inputs) {
 
-    private String[] getInputs() {
-        Scanner scan;
-        scan = new Scanner(System.in);
-
-        String[] inputs = new String[1];
-        System.out.println(
-                "===============================\n"
-                + "            Main Menu          \n"
-                + "===============================\n"
-                + "N - Start new game\n"
-                + "R - Restart existing game\n"
-                + "H - Get help on how to play the game\n"
-                + "E - Exit");
-
-        boolean valid = false;
-        while (valid == false) {
-            System.out.println("Please, enter your choice");
-            inputs[0] = scan.nextLine();
-            inputs[0] = inputs[0].trim();
-            if (inputs[0].length() < 1) {
-                System.out.println("You must enter a non-blank value");
-                continue;
-            }
-            valid = true;
-        }
-        return inputs;
-
-    }
-
-    private boolean doAction(String[] inputs) {
-
-        String menuItem = inputs[0].toUpperCase();
+        String menuItem = inputs.toUpperCase();
         switch (menuItem) {
             case "N":
                 startNewGame();
