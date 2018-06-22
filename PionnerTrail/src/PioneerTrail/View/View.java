@@ -24,7 +24,7 @@ public abstract class View implements ViewInterface {
         String inputs;
         do {
             inputs = this.getInputs();
-            if (inputs == null || inputs.length() < 1 || inputs.toUpperCase().equals("Q")) {
+            if (inputs == null || inputs.length() < 1 || inputs.toUpperCase().equals("E")) {
                 return;
             }
 

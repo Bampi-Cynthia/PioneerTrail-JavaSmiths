@@ -25,6 +25,35 @@ public class Scene implements Serializable {
     private ArrayList<Question> questions = new ArrayList<Question>();
     private ArrayList<Resource> resources = new ArrayList<Resource>();
 
+    private Actor actor;
+    private Question question;
+    private Resource resource;
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
+    public Resource getResource() {
+        return resource;
+    }
+
+    public void setResource(Resource resource) {
+        this.resource = resource;
+    }
+    
+    
 // default constructor
     public Scene(){
 }
