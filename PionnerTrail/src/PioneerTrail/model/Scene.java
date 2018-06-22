@@ -11,7 +11,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Isaias
+ * @author Elias and Cynthia
  */
 public class Scene implements Serializable {
     
