@@ -6,12 +6,7 @@
 package PioneerTrail.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
-
 /**
- *
  * @author Cynthia Bampi
  */
 public class Resource implements Serializable {

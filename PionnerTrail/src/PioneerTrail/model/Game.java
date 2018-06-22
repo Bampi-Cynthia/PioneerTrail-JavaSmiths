@@ -19,6 +19,7 @@ public class Game implements Serializable{
     // relationships between classes
     private Player player;
     private ArrayList<Actor> actors = new ArrayList<Actor>();
+    private ArrayList<Resource> resources;
     private Wagon wagon;
     private Map map;
     // dafault constructor
@@ -75,6 +76,13 @@ public class Game implements Serializable{
         this.milesTraveled = milesTraveled;
     }
 
+    public ArrayList<Resource> getResources() {
+        return resources;
+    }
+
+    public void setResources(ArrayList<Resource> resources) {
+        this.resources = resources;
+    }
     @Override
     public int hashCode() {
         int hash = 3;

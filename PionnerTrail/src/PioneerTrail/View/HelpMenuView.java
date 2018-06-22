@@ -16,14 +16,14 @@ public class HelpMenuView extends View{
     public HelpMenuView() {
    super(
            "===============================\n"
-                + "            Help Menu          \n"
-                + "===============================\n"
-                + "G - What is the goal of the game?\n"
-                + "M - How to move\n"
-                + "E - Estimate the number of resources\n"
-                + "H - Harvest resources\n"
-                + "Q - Quit\n" 
-                + "Please, Make a choice:\n");
+         + "            Help Menu          \n"
+         + "===============================\n"
+         + "G - What is the goal of the game?\n"
+         + "M - How to move\n"
+         + "E - Estimate the number of resources\n"
+         + "H - Harvest resources\n"
+         + "Q - Quit\n" 
+         + "Please, Make a choice:\n");
     }
     
 

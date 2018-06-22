@@ -22,6 +22,7 @@ public class GameControl {
     public static void createNewGame(){
         System.out.println("***Create New Game called***");
         Game game = new Game();
+        game.setResources(ResourceControl.createResourceList());
         PioneerTrail.setCurrentGame(game);
     }  
 }

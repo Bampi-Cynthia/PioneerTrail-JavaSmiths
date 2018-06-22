@@ -1,23 +1,19 @@
+
 package PioneerTrail.View;
 
-import java.util.Scanner;
-import PioneerTrail.control.MapControl;
-
 /**
- *
  * @author Cynthia
  */
 public class MapMenuView extends View{
     
 public MapMenuView() {
-    super(
-             "===============================\n"
-                + "            Map Menu          \n"
-                + "===============================\n"
-                + "D - Display Map\n"    
-                + "M - Move Menu view\n"
-                + "Q - Quit\n"
-                + "Please, Make a choice:\n");
+    super("===============================\n"
+        + "            Map Menu          \n"
+        + "===============================\n"
+        + "D - Display Map\n"    
+        + "M - Move Menu view\n"
+        + "Q - Quit\n"
+        + "Please, Make a choice:\n");
  }
 
 
