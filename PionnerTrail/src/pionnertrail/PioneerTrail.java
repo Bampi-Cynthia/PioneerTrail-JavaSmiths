@@ -38,7 +38,7 @@ public class PioneerTrail {
     //MAIN METHOD OF THE MAIN CLASS
     public static void main(String[] args) {
         
-//FROM THE VIEW LAYER
+    //FROM THE VIEW LAYER
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
     }

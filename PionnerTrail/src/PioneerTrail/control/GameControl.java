@@ -2,7 +2,9 @@
 package PioneerTrail.control;
 
 import PioneerTrail.model.Game;
+import PioneerTrail.model.Map;
 import PioneerTrail.model.Player;
+import PioneerTrail.model.Resource;
 import pionnertrail.PioneerTrail;
 
 
@@ -19,10 +21,20 @@ public class GameControl {
         PioneerTrail.setPlayer(player); 
         return player;
     }
-    public static void createNewGame(){
-        System.out.println("***Create New Game called***");
+    public static void createNewGame(Player player){
+        
+        if(player == null)
+            return;
+        
         Game game = new Game();
-        game.setResources(ResourceControl.createResourceList());
+        game.setPlayer(player);// save player in game.
         PioneerTrail.setCurrentGame(game);
-    }  
+        //reference to the setResources method
+        game.setResources(ResourceControl.createResourceList());        
+        //reference to the createMap method.
+        game.setMap(MapControl.createMap(5, 5));
+       
+    }
+
+
 }

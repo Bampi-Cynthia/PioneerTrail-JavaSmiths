@@ -9,20 +9,22 @@ import java.util.ArrayList;
  */
 public class ResourceControl {
     public static ArrayList<Resource> createResourceList(){
+    System.out.println("You have called the createResourceList method");
     
     ArrayList<Resource> resources = new ArrayList<Resource>();  
-    Resource test0 = new Resource("food",10,"flour",5);
-    Resource test1 = new Resource("tool",1,"hammer",2);
-    Resource test2 = new Resource("part",1,"Wagon Wheel",10);
-    resources.add(test0);
-    resources.add(test1);
-    resources.add(test2);
+    
+    Resource resource = new Resource("food",10,"flour",5);
+    resources.add(resource);
+    
+    resource = new Resource("tool",1,"hammer",2);
+    resources.add(resource);
+    
+    resource = new Resource("part",1,"Wagon Wheel",10);
+    resources.add(resource);
+    
     return resources;
-   // Resource[] resourcelist = {test0, test1, test2};
     }
-//    public Resource[] sendList(){
-//        return resourcelist;
-//    }
+
 }
 
    

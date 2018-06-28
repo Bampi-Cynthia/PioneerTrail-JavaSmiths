@@ -28,5 +28,12 @@ public class MapControl {
         map.setCoordinates(1,3); //testing purposes
         return map.getCoordinates();
     }
-    
+       
+    public static Map createMap(int noOfRows, int noOfColumns){
+        Map map = new Map();
+        map.setRowCount(noOfRows);
+        map.setColumnCount(noOfColumns);
+        System.out.println("You have called the createMap method");
+        return map;
+    };
 } 

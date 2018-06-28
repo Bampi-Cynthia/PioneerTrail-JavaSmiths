@@ -2,6 +2,7 @@
 package PioneerTrail.View;
 
 import PioneerTrail.control.GameControl;
+import pionnertrail.PioneerTrail;
 
 /**
  * @author Elías
@@ -45,7 +46,7 @@ public class MainMenuView extends View{
 
     private void startNewGame() {
         System.out.println("Start a new Game selected");
-        GameControl.createNewGame();
+        GameControl.createNewGame( PioneerTrail.getPlayer());
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
     }
