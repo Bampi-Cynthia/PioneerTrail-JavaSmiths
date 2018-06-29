@@ -11,12 +11,12 @@ import java.io.Serializable;
  */
 public class Resource implements Serializable {
     
-    private String inventoryType;
+    private ItemType inventoryType;
     private int quantity;
     private String name;
     private int weight;
     
-    public Resource(String inventoryType, int quantity, String name, int weight ){
+    public Resource(ItemType inventoryType, int quantity, String name, int weight ){
         this.inventoryType =  inventoryType;
         this.quantity = quantity;
         this.name = name;
@@ -26,11 +26,11 @@ public class Resource implements Serializable {
     public Resource() {
     }
 
-    public String getInventoryType() {
+    public ItemType getInventoryType() {
         return inventoryType;
     }
 
-    public void setInventoryType(String inventoryType) {
+    public void setInventoryType(ItemType inventoryType) {
         this.inventoryType = inventoryType;
     }
 

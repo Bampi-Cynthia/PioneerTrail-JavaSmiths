@@ -1,6 +1,7 @@
 
 package PioneerTrail.control;
 
+import PioneerTrail.model.ItemType;
 import PioneerTrail.model.Resource;
 import java.util.ArrayList;
 
@@ -13,13 +14,13 @@ public class ResourceControl {
     
     ArrayList<Resource> resources = new ArrayList<Resource>();  
     
-    Resource resource = new Resource("food",10,"flour",5);
+    Resource resource = new Resource(ItemType.food, 10,"flour",5);
     resources.add(resource);
     
-    resource = new Resource("tool",1,"hammer",2);
+    resource = new Resource(ItemType.tools,1,"hammer",2);
     resources.add(resource);
     
-    resource = new Resource("part",1,"Wagon Wheel",10);
+    resource = new Resource(ItemType.parts,1,"Wagon Wheel",10);
     resources.add(resource);
     
     return resources;

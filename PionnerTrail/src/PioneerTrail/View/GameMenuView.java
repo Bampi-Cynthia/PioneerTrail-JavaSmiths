@@ -1,6 +1,7 @@
 
 package PioneerTrail.View;
 import PioneerTrail.model.Actor;
+import PioneerTrail.model.ItemType;
 import PioneerTrail.model.Resource;
 import PioneerTrail.model.Scene;
 
@@ -79,8 +80,8 @@ class GameMenuView extends View{
         scene.setSymbol("NA");
         scene.setDescription("This is a beautifull town with a temple in construction");
         Resource resource = new Resource();
-        resource.setName("Knife");
-        resource.setInventoryType("Weapon");
+        resource.setName("knife");
+        resource.setInventoryType(ItemType.weapon);
         resource.setQuantity(1);
         resource.setWeight(3);
         scene.getResources().add(resource);
