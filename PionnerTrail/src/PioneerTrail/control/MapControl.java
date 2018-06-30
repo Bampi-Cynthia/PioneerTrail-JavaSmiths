@@ -47,34 +47,56 @@ public class MapControl {
         assignQuestionsToScenes(questions, scenes);
         assignItemsToScenes(scenes);
         assignScenesToLocations(scenes, locations);
-        
+
         System.out.println("You have called the createMap method");
         return map;
     }
 
     public static Location[][] createLocations(int noOfRows, int noOfColumns) {
-        return null;
+        System.out.println("Create Locations called");
+
+        if (noOfRows < 1 || noOfColumns < 1) {
+            return null;
+        }
+        Location[][] locations = new Location[noOfRows][noOfColumns];
+        //NAVIGATE A TWO DIMENSIONAL ARRAY
+
+        for (int row = 0; row < noOfRows; row++) {
+            for (int col = 0; col < noOfColumns; col++) {
+                Location[][] location = new Location[noOfRows][noOfColumns];
+                boolean visited = false;
+                locations[row][col] = new Location();
+            }
+        }   
+        //Assign location to the row, and column in array
+        //ENDFOR
+        //RETURN locations
+        //}
+        return locations;
     }
 
     public static Scene[] createScenes() {
+        System.out.println("Create Scenes called");
         return null;
     }
 
     public static Question[] createQuestions() {
+        System.out.println("Create Questions called");
         return null;
     }
 
     public static void assignQuestionsToScenes(Question[] questions,
-Scene[] scenes) {
-
+            Scene[] scenes) {
+        System.out.println("Assign Questions to Scenes called");
     }
 
     public static void assignItemsToScenes(Scene[] scenes) {
         ArrayList<Resource> items = PioneerTrail.getCurrentGame().getResources();
+        System.out.println("Assign Items to Scenes called");
     }
 
     public static void assignScenesToLocations(Scene[] scenes,
-Location[][] locations) {
-
+            Location[][] locations) {
+        System.out.println("Assign Scenes to Locations called");
     }
 }
