@@ -63,8 +63,6 @@ public class MapControl {
 
         for (int row = 0; row < noOfRows; row++) {
             for (int col = 0; col < noOfColumns; col++) {
-                Location[][] location = new Location[noOfRows][noOfColumns];
-                boolean visited = false;
                 locations[row][col] = new Location();
             }
         }   
