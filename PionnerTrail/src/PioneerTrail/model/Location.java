@@ -23,6 +23,7 @@ public class Location implements Serializable{
     private Map map;
     // default constructor
     public Location(){
+        this.visited = false;
     }
     // setter and getter
 
