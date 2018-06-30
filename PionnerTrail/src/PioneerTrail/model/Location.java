@@ -16,7 +16,7 @@ public class Location implements Serializable{
     //atributes
     private int column;
     private int row;
-    private String visited;
+    private boolean visited; //I changed from String to boolean 30/6
     //relationships between classes
     private Wagon wagon;
     private Scene scene;
@@ -66,11 +66,11 @@ public class Location implements Serializable{
         this.row = row;
     }
 
-    public String getVisited() {
+    public boolean getVisited() {
         return visited;
     }
 
-    public void setVisited(String visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
