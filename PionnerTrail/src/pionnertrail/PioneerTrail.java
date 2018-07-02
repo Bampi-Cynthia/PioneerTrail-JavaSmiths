@@ -11,12 +11,15 @@ import PioneerTrail.model.Resource;
 import PioneerTrail.model.Scene;
 import PioneerTrail.model.Wagon;
 
+import PioneerTrail.control.ResourceControl;
+
 /**
  *
  * @author tcbam_000
  */
 public class PioneerTrail {
     //attributes
+   
     private static Game currentGame = null;
     private static Player player = null;
 

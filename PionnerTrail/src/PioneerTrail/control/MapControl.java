@@ -1,4 +1,4 @@
-package PioneerTrail.control;
+ package PioneerTrail.control;
 import java.awt.Point;
 import PioneerTrail.model.Map;
 
