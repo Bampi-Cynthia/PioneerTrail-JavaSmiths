@@ -13,5 +13,5 @@ public enum ItemType {
     food,
     water,
     tools,
-    parts;
+    parts
 }

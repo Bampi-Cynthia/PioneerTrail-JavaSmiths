@@ -11,12 +11,15 @@ import PioneerTrail.model.Resource;
 import PioneerTrail.model.Scene;
 import PioneerTrail.model.Wagon;
 
+import PioneerTrail.control.ResourceControl;
+
 /**
  *
  * @author tcbam_000
  */
 public class PioneerTrail {
     //attributes
+   
     private static Game currentGame = null;
     private static Player player = null;
 
@@ -106,7 +109,7 @@ public class PioneerTrail {
         Location locationOne = new Location();
         locationOne.setColumn(4);
         locationOne.setRow(2);
-        locationOne.setVisited("Yes");
+        locationOne.setVisited(true);
 
         System.out.println(locationOne.getColumn());
         System.out.println(locationOne.getRow());

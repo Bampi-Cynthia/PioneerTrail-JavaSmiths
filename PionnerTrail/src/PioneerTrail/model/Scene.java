@@ -11,7 +11,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Isaias
+ * @author Elias and Cynthia
  */
 public class Scene implements Serializable {
     
@@ -25,17 +25,38 @@ public class Scene implements Serializable {
     private ArrayList<Question> questions = new ArrayList<Question>();
     private ArrayList<Resource> resources = new ArrayList<Resource>();
 
+    private Actor actor;
+    private Question question;
+    private Resource resource;
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
+    public Resource getResource() {
+        return resource;
+    }
+
+    public void setResource(Resource resource) {
+        this.resource = resource;
+    }
+    
+    
 // default constructor
     public Scene(){
 }
-    //getters and setters for all the atributes
-//    public ArrayList<Location> getLocations() {
-//        return locations;
-//    }
-//
-//    public void setLocations(ArrayList<Location> locations) {
-//        this.locations = locations;
-//    }
 
     public ArrayList<Actor> getActors() {
         return actors;

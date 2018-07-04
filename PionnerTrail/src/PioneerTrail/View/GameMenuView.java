@@ -4,9 +4,10 @@ import PioneerTrail.model.Actor;
 import PioneerTrail.model.ItemType;
 import PioneerTrail.model.Resource;
 import PioneerTrail.model.Scene;
+import PioneerTrail.View.ActorView;
 
 /**
- * @author Elías
+ * @author Elías and Cynthia
  */
 class GameMenuView extends View{
 
@@ -68,12 +69,11 @@ class GameMenuView extends View{
         helpMenuView.display();
     }
 
-    private void ViewActors() {
-        for (Actor actor : Actor.values()) {
-            System.out.println(actor);
+    private void  ViewActors() {
+            ActorView actorView = new ActorView();
+            actorView.display();
         }
-    }
-
+    
     private void viewScene() {
         Scene scene = new Scene();
         scene.setName("Navoo");
@@ -84,7 +84,7 @@ class GameMenuView extends View{
         resource.setInventoryType(ItemType.weapon);
         resource.setQuantity(1);
         resource.setWeight(3);
-        scene.getResources().add(resource);
+        scene.setResource(resource);
         SceneView sceneView = new SceneView(scene);
         sceneView.display();
     }
