@@ -113,7 +113,7 @@ public class PioneerTrail {
 
         System.out.println(locationOne.getColumn());
         System.out.println(locationOne.getRow());
-        System.out.println(locationOne.getVisited());
+        System.out.println(locationOne.isVisited());
 
         System.out.println(locationOne.toString());
 
