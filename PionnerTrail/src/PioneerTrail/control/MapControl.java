@@ -43,6 +43,7 @@ public class MapControl {
         map.setRowCount(noOfRows);
         map.setColumnCount(noOfColumns);
         Location[][] locations = createLocations(noOfRows, noOfColumns);
+        map.setLocations(locations);
         Scene[] scenes = createScenes();
         //Question[] questions = createQuestions();
         //assignQuestionsToScenes(questions, scenes);
@@ -95,7 +96,7 @@ public class MapControl {
 
         scenes[SceneType.CharitonRiverCrossing.ordinal()].setDescription("45 miles from Richardson’s Point , Chariton River is in southwest Iowa and Northeast Missouri");
         scenes[SceneType.CharitonRiverCrossing.ordinal()].setName("CharitonRiverCrossing");
-        scenes[SceneType.CharitonRiverCrossing.ordinal()].setSymbol("CRC");
+        scenes[SceneType.CharitonRiverCrossing.ordinal()].setSymbol("CR");
 //Scene 5 LOCUST CREEK
         scenes[SceneType.LocustCreek.ordinal()] = new Scene();
 
@@ -137,7 +138,7 @@ public class MapControl {
 
         scenes[SceneType.ElkhornRiverCrossing.ordinal()].setDescription("27 miles from Winter Quarters, Elkhorn River is in Nebraska");
         scenes[SceneType.ElkhornRiverCrossing.ordinal()].setName("Elkhorn River Crossing");
-        scenes[SceneType.ElkhornRiverCrossing.ordinal()].setSymbol("ERC");
+        scenes[SceneType.ElkhornRiverCrossing.ordinal()].setSymbol("ER");
 //Scene 12 PLATTE RIVER
         scenes[SceneType.PlatteRiver.ordinal()] = new Scene();
 
@@ -167,7 +168,7 @@ public class MapControl {
 
         scenes[SceneType.ChimneyRock.ordinal()].setDescription("72 miles from Ash Hollow, is a geological rock in Nebraska State");
         scenes[SceneType.ChimneyRock.ordinal()].setName("Chimney Rocks");
-        scenes[SceneType.ChimneyRock.ordinal()].setSymbol("CHR");
+        scenes[SceneType.ChimneyRock.ordinal()].setSymbol("CH");
 //Scene 17 SCOTTS BLUFF
         scenes[SceneType.ScottsBluff.ordinal()] = new Scene();
 
@@ -193,11 +194,11 @@ public class MapControl {
         scenes[SceneType.IndependenceRock.ordinal()].setName("Independence Rock");
         scenes[SceneType.IndependenceRock.ordinal()].setSymbol("IR");
 //Scene 21 FORT BRIDGER
-        scenes[SceneType.IndependenceRock.ordinal()] = new Scene();
+        scenes[SceneType.FortBridger.ordinal()] = new Scene();
 
-        scenes[SceneType.IndependenceRock.ordinal()].setDescription("218 miles from Independence Rock, is in Wyoming State");
-        scenes[SceneType.IndependenceRock.ordinal()].setName("Fort Bridger");
-        scenes[SceneType.IndependenceRock.ordinal()].setSymbol("FB");
+        scenes[SceneType.FortBridger.ordinal()].setDescription("218 miles from Independence Rock, is in Wyoming State");
+        scenes[SceneType.FortBridger.ordinal()].setName("Fort Bridger");
+        scenes[SceneType.FortBridger.ordinal()].setSymbol("FB");
 //Scene 22 FORT BRIDGER
         scenes[SceneType.EchoCanyon.ordinal()] = new Scene();
 
@@ -209,7 +210,7 @@ public class MapControl {
 
         scenes[SceneType.GoldenPassRoad.ordinal()].setDescription("35 miles from Echo Canyon, it is a Utah road");
         scenes[SceneType.GoldenPassRoad.ordinal()].setName("Golden Pass Road");
-        scenes[SceneType.GoldenPassRoad.ordinal()].setSymbol("GPR");
+        scenes[SceneType.GoldenPassRoad.ordinal()].setSymbol("GP");
 //Scene 24 GOLDEN PASS ROAD
         scenes[SceneType.EmigrationCanyon.ordinal()] = new Scene();
 
@@ -221,7 +222,7 @@ public class MapControl {
 
         scenes[SceneType.Zion.ordinal()].setDescription("14 miles from Emigration Canyon, Final destination");
         scenes[SceneType.Zion.ordinal()].setName("Zion");
-        scenes[SceneType.Zion.ordinal()].setSymbol("Z");
+        scenes[SceneType.Zion.ordinal()].setSymbol("ZN");
 
         return scenes;
     }
@@ -239,10 +240,40 @@ public class MapControl {
     public static void assignItemsToScenes(Scene[] scenes) {
         ArrayList<Resource> items = PioneerTrail.getCurrentGame().getResources();
         System.out.println("Assign Items to Scenes called");
+        
     }
 
-    public static void assignScenesToLocations(Scene[] scenes,
-            Location[][] locations) {
+    public static void assignScenesToLocations(Scene[] scenes, Location[][] locations) {
         System.out.println("Assign Scenes to Locations called");
+      
+      locations[0][0].setScene(scenes[SceneType.Nauvoo.ordinal()]);
+      locations[0][1].setScene(scenes[SceneType.SugarCreek.ordinal()]);
+      locations[0][2].setScene(scenes[SceneType.RichardsonsPoint.ordinal()]);
+      locations[0][3].setScene(scenes[SceneType.CharitonRiverCrossing.ordinal()]);
+      locations[0][4].setScene(scenes[SceneType.LocustCreek.ordinal()]);
+     
+      locations[1][0].setScene(scenes[SceneType.GardenGrove.ordinal()]);
+      locations[1][1].setScene(scenes[SceneType.NishnabotnaRiver.ordinal()]);
+      locations[1][2].setScene(scenes[SceneType.GrandEncampment.ordinal()]);
+      locations[1][3].setScene(scenes[SceneType.CouncilBluffs.ordinal()]);
+      locations[1][4].setScene(scenes[SceneType.WinterQuarters.ordinal()]);
+      
+      locations[2][0].setScene(scenes[SceneType.ElkhornRiverCrossing.ordinal()]);
+      locations[2][1].setScene(scenes[SceneType.PlatteRiver.ordinal()]);
+      locations[2][2].setScene(scenes[SceneType.FortKearny.ordinal()]);
+      locations[2][3].setScene(scenes[SceneType.ConfluencePoint.ordinal()]);
+      locations[2][4].setScene(scenes[SceneType.AshHollow.ordinal()]);
+      
+      locations[3][0].setScene(scenes[SceneType.ChimneyRock.ordinal()]);
+      locations[3][1].setScene(scenes[SceneType.ScottsBluff.ordinal()]);
+      locations[3][2].setScene(scenes[SceneType.FortLaramie.ordinal()]);
+      locations[3][3].setScene(scenes[SceneType.SweetwaterRiver.ordinal()]);
+      locations[3][4].setScene(scenes[SceneType.IndependenceRock.ordinal()]);
+      
+      locations[4][0].setScene(scenes[SceneType.FortBridger.ordinal()]);
+      locations[4][1].setScene(scenes[SceneType.EchoCanyon.ordinal()]);
+      locations[4][2].setScene(scenes[SceneType.GoldenPassRoad.ordinal()]);
+      locations[4][3].setScene(scenes[SceneType.EmigrationCanyon.ordinal()]);
+      locations[4][4].setScene(scenes[SceneType.Zion.ordinal()]);
     }
 }
