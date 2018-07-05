@@ -22,6 +22,15 @@ public class ResourceControl {
     
     resource = new Resource(ItemType.parts,1,"Wagon Wheel",10);
     resources.add(resource);
+        
+    resource = new Resource(ItemType.wood,100,"Wood",30);
+    resources.add(resource);
+    
+    resource = new Resource(ItemType.ammo,70,"Ammo",5);
+    resources.add(resource);
+    
+    resource = new Resource(ItemType.shoes,10,"Shoes",8);
+    resources.add(resource);
     
     return resources;
     }
