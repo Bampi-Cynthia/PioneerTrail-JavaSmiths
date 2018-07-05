@@ -14,6 +14,36 @@ public class Map implements Serializable{
     private Point coordinates;
     private int rowCount;
     private int columnCount;
+    private Location[][] locations;
+    private int currentRow;
+    private int currentColumn;
+    
+    public Location getCurrentLocation(){
+        return locations[currentRow][currentColumn];
+    }
+    public int getCurrentRow() {
+        return currentRow;
+    }
+
+    public void setCurrentRow(int currentRow) {
+        this.currentRow = currentRow;
+    }
+
+    public int getCurrentColumn() {
+        return currentColumn;
+    }
+
+    public void setCurrentColumn(int currentColumn) {
+        this.currentColumn = currentColumn;
+    }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
     
     //Default constructor
     public Map(){
