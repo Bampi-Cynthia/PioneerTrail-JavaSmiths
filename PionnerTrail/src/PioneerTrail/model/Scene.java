@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package PioneerTrail.model;
 
 import java.io.Serializable;
@@ -10,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 /**
- *
  * @author Elias and Cynthia
  */
 public class Scene implements Serializable {
@@ -19,11 +14,11 @@ public class Scene implements Serializable {
     private String symbol;
     private String name;
     
-// relationship with other classes
-  //  private ArrayList<Location> locations = new ArrayList<Location>();//Brother Jones said we can rid of it
-    private ArrayList<Actor> actors = new ArrayList<Actor>();
-    private ArrayList<Question> questions = new ArrayList<Question>();
-    private ArrayList<Resource> resources = new ArrayList<Resource>();
+//relationship with other classes
+//private ArrayList<Location> locations = new ArrayList<Location>();//Brother Jones said we can rid of it
+//    private ArrayList<Actor> actors = new ArrayList<Actor>();
+//    private ArrayList<Question> questions = new ArrayList<Question>();
+//    private ArrayList<Resource> resources = new ArrayList<Resource>();
 
     private Actor actor;
     private Question question;
@@ -58,29 +53,29 @@ public class Scene implements Serializable {
     public Scene(){
 }
 
-    public ArrayList<Actor> getActors() {
-        return actors;
-    }
-
-    public void setActors(ArrayList<Actor> actors) {
-        this.actors = actors;
-    }
-
-    public ArrayList<Question> getQuestions() {
-        return questions;
-    }
-
-    public void setQuestions(ArrayList<Question> questions) {
-        this.questions = questions;
-    }
-
-    public ArrayList<Resource> getResources() {
-        return resources;
-    }
-
-    public void setResources(ArrayList<Resource> resources) {
-        this.resources = resources;
-    }
+//    public ArrayList<Actor> getActors() {
+//        return actors;
+//    }
+//
+//    public void setActors(ArrayList<Actor> actors) {
+//        this.actors = actors;
+//    }
+//
+//    public ArrayList<Question> getQuestions() {
+//        return questions;
+//    }
+//
+//    public void setQuestions(ArrayList<Question> questions) {
+//        this.questions = questions;
+//    }
+//
+//    public ArrayList<Resource> getResources() {
+//        return resources;
+//    }
+//
+//    public void setResources(ArrayList<Resource> resources) {
+//        this.resources = resources;
+//    }
 
     public String getDescription() {
         return description;
