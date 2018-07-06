@@ -23,7 +23,6 @@ public class Wagon implements Serializable {
 
     //default constructor
     public Wagon(){   
-        
 }
 
     public int getIntegrity() {
@@ -61,10 +60,6 @@ public class Wagon implements Serializable {
     public void setCurrentWeight(int currentWeight) {
         this.currentWeight = currentWeight;
     }
-
-    
-    
-    
     
     @Override
     public int hashCode() {
