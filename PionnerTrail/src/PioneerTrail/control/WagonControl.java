@@ -12,16 +12,17 @@ import PioneerTrail.exceptions.WagonControlException;
  */
 public class WagonControl {
     
-    public static int addtoWagon(Wagon wagon, Resource resource)throws WagonControlException{
+    public static int calculateWagonCurrentWeight(Wagon wagon, Resource resource)throws WagonControlException{
         
+        //previously the method name was addtoWagon()
         if(wagon.getCurrentWeight() >= wagon.getCapacity()){
         throw new WagonControlException("Wagon weight overpassed");
         }
         if(resource.getQuantity() < 1){
-        throw new WagonControlException("You must catch at least one");
+        throw new WagonControlException("Your wagon is empty of items!");
         }
         if(resource.getWeight() < 1){
-        throw new WagonControlException("The item is ethereal, you cannot touch it");
+        throw new WagonControlException("Your wagon is empty!");
         }
         if(resource.getQuantity() * resource.getWeight() + wagon.getCurrentWeight() >= wagon.getCapacity()){
         throw new WagonControlException("Your wagon is overweight");
