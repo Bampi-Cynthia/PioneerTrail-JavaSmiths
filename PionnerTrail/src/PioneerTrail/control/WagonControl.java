@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package PioneerTrail.control;
 
 import PioneerTrail.model.Game;
 import PioneerTrail.model.Resource;
 import PioneerTrail.model.Wagon;
+import PioneerTrail.exceptions.WagonControlException;
 
 /**
  *
@@ -15,19 +12,19 @@ import PioneerTrail.model.Wagon;
  */
 public class WagonControl {
     
-    public static int addtoWagon(Wagon wagon, Resource resource){
+    public static int addtoWagon(Wagon wagon, Resource resource)throws WagonControlException{
         
         if(wagon.getCurrentWeight() >= wagon.getCapacity()){
-        return -1;
+        throw new WagonControlException("Wagon weight overpassed");
         }
         if(resource.getQuantity() < 1){
-        return -2;
+        throw new WagonControlException("You must catch at least one");
         }
         if(resource.getWeight() < 1){
-        return -3;
+        throw new WagonControlException("The item is ethereal, you cannot touch it");
         }
         if(resource.getQuantity() * resource.getWeight() + wagon.getCurrentWeight() >= wagon.getCapacity()){
-        return -4;
+        throw new WagonControlException("Your wagon is overweight");
         }
         return (resource.getQuantity() * resource.getWeight() + wagon.getCurrentWeight());
     }
