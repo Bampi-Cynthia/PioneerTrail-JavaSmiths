@@ -53,7 +53,6 @@ public class PioneerTrail {
         Wagon wagonOne = new Wagon();
         wagonOne.setIntegrityLabel("test");
         wagonOne.setWheelsCount(4);
-        wagonOne.setCapacity(150);
         
         System.out.println(wagonOne.getIntegrityLabel());
 
