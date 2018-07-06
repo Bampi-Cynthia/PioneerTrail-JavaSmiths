@@ -17,7 +17,7 @@ public class Wagon implements Serializable {
     private String integrityLabel;
     private int integrity;
     private int wheelsCount;
-    private int capacity;
+    private final int capacity = 100;
     private int currentWeight; //I added this new attribute, and created getter and setter for it.
     
 
@@ -53,10 +53,7 @@ public class Wagon implements Serializable {
     public int getCapacity() {
         return capacity;
     }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
+    
     public int getCurrentWeight() {
         return currentWeight;
     }
@@ -91,9 +88,6 @@ public class Wagon implements Serializable {
         }
         final Wagon other = (Wagon) obj;
         if (this.wheelsCount != other.wheelsCount) {
-            return false;
-        }
-        if (this.capacity != other.capacity) {
             return false;
         }
         if (!Objects.equals(this.integrityLabel, other.integrityLabel)) {
