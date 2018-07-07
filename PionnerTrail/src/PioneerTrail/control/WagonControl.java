@@ -24,8 +24,8 @@ public class WagonControl {
         if(resource.getWeight() < 1){
         throw new WagonControlException("Your wagon is empty!");
         }
-        if(resource.getQuantity() * resource.getWeight() + wagon.getCurrentWeight() >= wagon.getCapacity()){
-        throw new WagonControlException("Your wagon is overweight");
+        if(resource.getQuantity() * resource.getWeight() + wagon.getCurrentWeight() > wagon.getCapacity()){
+        throw new WagonControlException("Your wagon will be overweight");
         }
         return (resource.getQuantity() * resource.getWeight() + wagon.getCurrentWeight());
     }

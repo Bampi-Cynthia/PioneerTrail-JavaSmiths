@@ -5,6 +5,7 @@ import PioneerTrail.model.Game;
 import PioneerTrail.model.Map;
 import PioneerTrail.model.Player;
 import PioneerTrail.model.Resource;
+import PioneerTrail.model.Wagon;
 import pionnertrail.PioneerTrail;
 
 
@@ -27,6 +28,13 @@ public class GameControl {
             return;
         
         Game game = new Game();
+        Wagon wagon = new Wagon();
+        wagon.setCapacity(500);
+        wagon.setCurrentWeight(50);
+        wagon.setIntegrity(100);
+        wagon.setIntegrityLabel("Perfect!");
+        wagon.setWheelsCount(5);
+        game.setWagon(wagon);
         game.setPlayer(player);// save player in game.
         PioneerTrail.setCurrentGame(game);
         //reference to the setResources method

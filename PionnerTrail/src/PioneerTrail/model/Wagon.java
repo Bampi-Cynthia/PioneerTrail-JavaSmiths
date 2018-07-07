@@ -6,6 +6,7 @@
 package PioneerTrail.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -17,13 +18,24 @@ public class Wagon implements Serializable {
     private String integrityLabel;
     private int integrity;
     private int wheelsCount;
-    private final int capacity = 100;
+    private int capacity;
     private int currentWeight; //I added this new attribute, and created getter and setter for it.
+    private ArrayList<Resource> resources;//the resources that are in the wagon.
     
 
     //default constructor
     public Wagon(){   
+        capacity = 100;
+        resources = new ArrayList<Resource>();
 }
+
+    public ArrayList<Resource> getResources() {
+        return resources;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
 
     public int getIntegrity() {
         return integrity;
