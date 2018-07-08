@@ -11,7 +11,6 @@ import PioneerTrail.model.Resource;
 import PioneerTrail.model.Scene;
 import PioneerTrail.model.Wagon;
 
-import PioneerTrail.control.ResourceControl;
 
 /**
  *
