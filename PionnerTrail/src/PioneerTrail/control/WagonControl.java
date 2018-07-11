@@ -13,7 +13,12 @@ import PioneerTrail.exceptions.WagonControlException;
 public class WagonControl {
     
     public static int calculateWagonCurrentWeight(Wagon wagon, Resource resource)throws WagonControlException{
-        
+//        try {
+//           int Wood = calculateWood(2, 0.1, 5 );
+//        }
+//        catch (HarvestControlException ex) {
+//            
+//        }
         //previously the method name was addtoWagon()
         if(wagon.getCurrentWeight() >= wagon.getCapacity()){
         throw new WagonControlException("Wagon weight overpassed");
