@@ -10,7 +10,7 @@ import PioneerTrail.exceptions.HarvestControlException;
  */
 public class HarvestControl {
  
-    public static int calculateWood(  int initialWood, float consumedWood, int maxWood) throws HarvestControlException  {
+    public static int calculateWood(Player player, int initialWood, float consumedWood, int maxWood) throws HarvestControlException  {
         
         if (initialWood<10) { 
             throw new HarvestControlException ( " invalid diameter");
