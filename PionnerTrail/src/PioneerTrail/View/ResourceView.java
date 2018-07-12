@@ -13,12 +13,13 @@ import pionnertrail.PioneerTrail;
 public class ResourceView extends View {
     
     public ResourceView() {
-//        super("===============================\n"
-//            + "            Resource Menu      \n"
-//            + "===============================\n"
-//            + "D - Display Resource List\n"    
-//            + "Q - Quit \n"
-//            + "Please, make your choice");
+     super("===============================\n"
+        + "            Resource Menu      \n"
+        + "===============================\n"
+        + "D - Display Resource List\n" 
+        + "P - Print Report\n"      
+        + "Q - Quit \n"
+        + "Please, make your choice");
         promptMessage = getResourceListString();
     }
     

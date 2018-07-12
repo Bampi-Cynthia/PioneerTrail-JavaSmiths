@@ -16,6 +16,7 @@ public class MapMenuView extends View {
                 + "===============================\n"
                 + "D - Display Map\n"
                 + "M - Move To Next Location\n"
+                + "P - Print Report\n"
                 + "Q - Quit\n"
                 + "Please, Make a choice:\n");
     }
