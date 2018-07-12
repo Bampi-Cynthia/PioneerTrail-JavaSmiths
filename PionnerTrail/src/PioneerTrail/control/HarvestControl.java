@@ -3,6 +3,7 @@ package PioneerTrail.control;
 
 import PioneerTrail.model.Player;
 import PioneerTrail.exceptions.HarvestControlException;
+import static javax.swing.text.html.HTML.Tag.HEAD;
 
 /**
  *
