@@ -2,6 +2,7 @@
 package PioneerTrail.control;
 
 import PioneerTrail.exceptions.GameControlException;
+import PioneerTrail.exceptions.MapControlException;
 import PioneerTrail.model.Game;
 import PioneerTrail.model.Map;
 import PioneerTrail.model.Player;
@@ -11,6 +12,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pionnertrail.PioneerTrail;
 
 
@@ -18,19 +21,19 @@ import pionnertrail.PioneerTrail;
  * @author Elías
  */
 public class GameControl {
-    public static Player savePlayer(String name){
+    public static Player savePlayer(String name) throws GameControlException {
         if(name == null || name.length() < 1){
-        return null;
+        throw new GameControlException("You must provide a name");
         }
         Player player = new Player();
         player.setName(name);
         PioneerTrail.setPlayer(player); 
         return player;
     }
-    public static void createNewGame(Player player){
+    public static void createNewGame(Player player) throws GameControlException{
         
         if(player == null)
-            return;
+            throw new GameControlException("Error creating the player");
         
         Game game = new Game();
         Wagon wagon = new Wagon();
@@ -44,8 +47,12 @@ public class GameControl {
         PioneerTrail.setCurrentGame(game);
         //reference to the setResources method
         game.setResources(ResourceControl.createResourceList());        
-        //reference to the createMap method.
-        game.setMap(MapControl.createMap(5, 5));
+        try {
+            //reference to the createMap method.
+            game.setMap(MapControl.createMap(5, 5));
+        } catch (MapControlException ex) {
+            System.out.println(ex.getMessage());
+        }
        
     }
     public static void saveGame(Game game, String fileName) throws GameControlException{

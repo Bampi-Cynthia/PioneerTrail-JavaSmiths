@@ -2,6 +2,9 @@
 package PioneerTrail.View;
 
 import PioneerTrail.control.GameControl;
+import PioneerTrail.exceptions.GameControlException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pionnertrail.PioneerTrail;
 
 /**
@@ -46,7 +49,11 @@ public class MainMenuView extends View{
 
     private void startNewGame() {
         System.out.println("Start a new Game selected");
-        GameControl.createNewGame( PioneerTrail.getPlayer());
+        try {
+            GameControl.createNewGame(PioneerTrail.getPlayer());
+        } catch (GameControlException ex) {
+            Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+        }
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
     }

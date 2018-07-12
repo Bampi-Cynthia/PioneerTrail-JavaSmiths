@@ -75,7 +75,6 @@ public class PioneerTrail {
     public static void main(String[] args) {
 
         try {
-
             //open character steam files for end user input and output
             PioneerTrail.inFile = new BufferedReader(new InputStreamReader(System.in));
 
@@ -85,6 +84,7 @@ public class PioneerTrail {
             StartProgramView startProgramView = new StartProgramView();
             startProgramView.display();
             return;
+            
         } catch (Throwable e) {
             System.out.println("Exception: " + e.toString()
                     + "\nCause: " + e.getCause()

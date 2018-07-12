@@ -37,9 +37,9 @@ public class MapControl {
         return map.getCoordinates();
     }
 
-    public static Map createMap(int noOfRows, int noOfColumns) {
+    public static Map createMap(int noOfRows, int noOfColumns) throws MapControlException{
         if (noOfRows <= 0 || noOfColumns <= 0) {
-            return null;
+            throw new MapControlException("Error creating the map");
         };
 
         Map map = new Map();
@@ -57,11 +57,11 @@ public class MapControl {
         return map;
     }
 
-    public static Location[][] createLocations(int noOfRows, int noOfColumns) {
+    public static Location[][] createLocations(int noOfRows, int noOfColumns) throws MapControlException{
         System.out.println("Create Locations called");
 
         if (noOfRows < 1 || noOfColumns < 1) {
-            return null;
+            throw new  MapControlException();
         }
         Location[][] locations = new Location[noOfRows][noOfColumns];
         //NAVIGATE A TWO DIMENSIONAL ARRAY
@@ -230,9 +230,9 @@ public class MapControl {
         return scenes;
     }
 
-    public static Question[] createQuestions() {
+    public static Question[] createQuestions() throws MapControlException{
         System.out.println("Create Questions called");
-        return null;
+        throw new MapControlException();
     }
 
     public static void assignQuestionsToScenes(Question[] questions,

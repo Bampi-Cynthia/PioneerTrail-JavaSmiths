@@ -62,7 +62,7 @@ public abstract class View implements ViewInterface {
             break;
             }
         } catch (Exception e) {
-            System.out.println("Error readin input: " + e.getMessage());
+            System.out.println("Error reading input: " + e.getMessage());
         }
         return selection;//return the name
     }

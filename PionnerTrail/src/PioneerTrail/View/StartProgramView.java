@@ -1,7 +1,10 @@
 package PioneerTrail.View;
 
 import PioneerTrail.control.GameControl; // experimenting
+import PioneerTrail.exceptions.GameControlException;
 import PioneerTrail.model.Player; // experimenting
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author Elías
@@ -18,7 +21,11 @@ public class StartProgramView extends View {
     @Override
     public boolean doAction(String inputs) {
         String playersName = inputs;
-        Player player = GameControl.savePlayer(playersName);
+        try {
+            Player player = GameControl.savePlayer(playersName);
+        } catch (GameControlException ex) {
+            Logger.getLogger(StartProgramView.class.getName()).log(Level.SEVERE, null, ex);
+        }
         //System.out.println("***\"Save game is not implemented yet.\"***");
         System.out.println(
                   "===============================\n "
