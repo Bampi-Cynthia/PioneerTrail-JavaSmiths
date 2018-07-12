@@ -5,6 +5,7 @@
  */
 package PioneerTrail.control;
 
+import PioneerTrail.exceptions.HarvestControlException;
 import PioneerTrail.model.Player;
 import org.junit.After;
 import org.junit.Before;
@@ -30,9 +31,10 @@ public class HarvestControlTest {
 
     /**
      * Test of calculateWood method, of class HarvestControl.
+     * @throws PioneerTrail.exceptions.HarvestControlException
      */
     @Test
-    public void testCalculateWood() {
+    public void testCalculateWood() throws HarvestControlException {
         System.out.println("Valid Case");
         Player player = new Player();
         player.setTotalDistTraveled(2);
@@ -40,9 +42,9 @@ public class HarvestControlTest {
         float consumedWood = 1.0F;
         int maxWood = 100;
         int expResult = 79;
-        int result = HarvestControl.calculateWood(player, initialWood, consumedWood, maxWood);
+        int result = HarvestControl.calculateWood( player, initialWood, consumedWood, maxWood);
         assertEquals(expResult, result);
-        
+       
         System.out.println("test 2 Invalid case 1");
         
         player.setTotalDistTraveled(10);
