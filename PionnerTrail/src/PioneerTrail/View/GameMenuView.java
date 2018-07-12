@@ -22,6 +22,7 @@ class GameMenuView extends View {
                 + "===============================\n"
                 + "V - View Map\n"
                 + "R - View Resources\n"
+                + "G - Save the Game\n"
                 + "A - View Actors\n"
                 + "T - Test Wagon Weight\n"
                 + "S - View Scene\n"
@@ -41,6 +42,9 @@ class GameMenuView extends View {
             case "R":
                 ViewResources();
                 break;
+                case "G":
+                saveGame();
+                break;
             case "H":
                 getHelp();
                 break;
@@ -56,7 +60,7 @@ class GameMenuView extends View {
             case "E":
                 return true;
             default:
-                System.out.println("Invalid menu item");
+                ErrorView.display(this.getClass().getName(), "Select between the menu choices");
                 break;
         }
         return false;
@@ -115,5 +119,10 @@ class GameMenuView extends View {
             System.out.println("Wagon weight = " + wagon.getCurrentWeight());
             System.out.println("You can add " + resource.getName() + "with a weight of " + resource.getWeight() * resource.getQuantity());
         }
+    }
+
+    private void saveGame() {
+        SaveGameView saveGameView = new SaveGameView();
+        saveGameView.display();
     }
 }

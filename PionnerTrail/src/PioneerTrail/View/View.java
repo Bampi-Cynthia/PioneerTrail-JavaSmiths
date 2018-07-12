@@ -53,10 +53,10 @@ public abstract class View implements ViewInterface {
             selection = this.keyboard.readLine();
             selection = selection.trim();
             if(prompt != null){
-            System.out.println(prompt);
+            this.console.println(promptMessage);
             }
             if (selection.length() < 1) { //blank value entered
-                System.out.println("You must enter a value");
+                ErrorView.display(this.getClass().getName(), "You must enter a valid name");
                 continue;
             }
             break;

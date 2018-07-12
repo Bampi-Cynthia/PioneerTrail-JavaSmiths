@@ -54,6 +54,14 @@ public class PioneerTrail {
         PioneerTrail.currentGame = currentGame;
     }
 
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        PioneerTrail.logFile = logFile;
+    }
+
     public static Player getPlayer() {
         return player;
     }
@@ -61,6 +69,7 @@ public class PioneerTrail {
     public static void setPlayer(Player player) {
         PioneerTrail.player = player;
     }
+    private static PrintWriter logFile = null;
 
     //MAIN METHOD OF THE MAIN CLASS
     public static void main(String[] args) {
@@ -71,6 +80,7 @@ public class PioneerTrail {
             PioneerTrail.inFile = new BufferedReader(new InputStreamReader(System.in));
 
             PioneerTrail.outFile = new PrintWriter(System.out, true);
+            logFile = new PrintWriter("logFile.txt");
             //FROM THE VIEW LAYER
             StartProgramView startProgramView = new StartProgramView();
             startProgramView.display();
@@ -87,6 +97,9 @@ public class PioneerTrail {
                 }
                 if (PioneerTrail.outFile != null) {
                     PioneerTrail.outFile.close();
+                }
+                if (logFile != null) {
+                    logFile.close();
                 }
             } catch (IOException ex) {
                 System.out.println("Error closing files");

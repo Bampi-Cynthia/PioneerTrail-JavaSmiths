@@ -33,7 +33,7 @@ public class MapMenuView extends View {
                     System.out.println("You have arrived at Zion!!");
                 break;
             default:
-                System.out.println("Invalid map menu item");
+                ErrorView.display(this.getClass().getName(), "Select between the menu choices");
                 break;
         }
         return false;

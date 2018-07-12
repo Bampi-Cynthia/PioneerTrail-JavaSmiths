@@ -27,7 +27,7 @@ public class ResourceView extends View {
         ArrayList<Resource> resources = PioneerTrail.getCurrentGame().getResources();
         int selection = Integer.parseInt(inputs);
         if (selection < 0 || selection >= resources.size()) {
-            System.out.println("Invalid choice");
+            ErrorView.display(this.getClass().getName(), "Select between the menu choices");
             return false;
         }
         
@@ -65,7 +65,7 @@ public class ResourceView extends View {
             result = WagonControl.calculateWagonCurrentWeight(wagon, resource);
         } catch (WagonControlException ex) {
             System.out.println(ex.getMessage());
-            System.out.println("Unable to add resource");
+            ErrorView.display(this.getClass().getName(), "Unable to add resource");
             return false;
             //Logger.getLogger(WagonControlTest.class.getName()).log(Level.SEVERE, null, ex);
         }

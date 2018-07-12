@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package PioneerTrail.View;
 
 import java.util.Scanner;
 
-/**
- *
+/*
  * @author Cynthia
  */
 public class HelpMenuView extends View{
@@ -91,7 +86,7 @@ public class HelpMenuView extends View{
             case "Q":
                 return true;
             default:
-                System.out.println("Invalid help menu item");
+                ErrorView.display(this.getClass().getName(), "Select between the menu choices");
                 break;
         }
         return false;

@@ -1,8 +1,7 @@
 
 package PioneerTrail.View;
 
-/**
- *
+/*
  * @author Cynthia
  */
 public class MoveLocationView {

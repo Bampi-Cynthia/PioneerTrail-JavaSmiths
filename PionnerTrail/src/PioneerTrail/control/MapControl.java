@@ -279,27 +279,4 @@ public class MapControl {
       locations[4][3].setScene(scenes[SceneType.EmigrationCanyon.ordinal()]);
       locations[4][4].setScene(scenes[SceneType.Zion.ordinal()]);
     }
-    
-//public static Location moveActor(Actor actor, int newRow, int newColumn) throws MapControlException{
-//    
-//if (actor == null){
-//throw new MapControlException("There's no actor to move!");
-//}
-//Game game = PioneerTrail.getCurrentGame();
-//Map map = game.getMap();
-//Location[][] locations = map.getLocations();
-//if (newRow < 1 || newRow > map.getRowCount().lenght -1 || newColumn < 1 || newColumn > map.getColumnCount().lenght -1){
-//throw new MapControlException("Please, set a right coordinate in the map!");
-//}
-//currentRow = get the row from the actor
-//currentColumn = get the column from the actor
-//oldLocation = get the location from the locations
-//array at the current row and column
-//newLocation = get the location at the new row and column
-//set actor in the oldLocation to null
-//set actor in the newLocation to the actor
-//set row in actor to newRow
-//set column in actor to newColumn
-//return newLocation
-//}
 }

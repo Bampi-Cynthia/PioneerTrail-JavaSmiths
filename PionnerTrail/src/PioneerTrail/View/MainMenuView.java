@@ -38,7 +38,7 @@ public class MainMenuView extends View{
             case "E":
                 return true;
             default:
-                System.out.println("Invalid menu item");
+                ErrorView.display(this.getClass().getName(), "Select between the menu choices");
                 break;
         }
         return false;
