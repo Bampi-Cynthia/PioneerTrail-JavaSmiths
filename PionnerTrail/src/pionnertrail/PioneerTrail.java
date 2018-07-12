@@ -10,7 +10,12 @@ import PioneerTrail.model.Question;
 import PioneerTrail.model.Resource;
 import PioneerTrail.model.Scene;
 import PioneerTrail.model.Wagon;
-
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,9 +23,28 @@ import PioneerTrail.model.Wagon;
  */
 public class PioneerTrail {
     //attributes
-   
+
     private static Game currentGame = null;
     private static Player player = null;
+
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        PioneerTrail.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        PioneerTrail.inFile = inFile;
+    }
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -37,14 +61,40 @@ public class PioneerTrail {
     public static void setPlayer(Player player) {
         PioneerTrail.player = player;
     }
+
     //MAIN METHOD OF THE MAIN CLASS
     public static void main(String[] args) {
-        
-    //FROM THE VIEW LAYER
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.display();
+
+        try {
+
+            //open character steam files for end user input and output
+            PioneerTrail.inFile = new BufferedReader(new InputStreamReader(System.in));
+
+            PioneerTrail.outFile = new PrintWriter(System.out, true);
+            //FROM THE VIEW LAYER
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.display();
+            return;
+        } catch (Throwable e) {
+            System.out.println("Exception: " + e.toString()
+                    + "\nCause: " + e.getCause()
+                    + "\nMessage: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            try {
+                if (PioneerTrail.inFile != null) {
+                    PioneerTrail.inFile.close();
+                }
+                if (PioneerTrail.outFile != null) {
+                    PioneerTrail.outFile.close();
+                }
+            } catch (IOException ex) {
+                System.out.println("Error closing files");
+                return;
+            }
+        }
     }
-    
+
     public static void cynthia_test() {
         String[] testArray = {"test0", "test1"};
 
@@ -52,7 +102,7 @@ public class PioneerTrail {
         Wagon wagonOne = new Wagon();
         wagonOne.setIntegrityLabel("test");
         wagonOne.setWheelsCount(4);
-        
+
         System.out.println(wagonOne.getIntegrityLabel());
 
         System.out.println(wagonOne.getIntegrity());
@@ -146,7 +196,7 @@ public class PioneerTrail {
         Actor.John.setHealth(5);
         Actor.Maria.setHunger(3);
         Actor.Jimmy.setHunger(0);
-        
+
         System.out.println(Actor.Father.getHealth());
         System.out.println(Actor.Mother.getHealth());
         System.out.println(Actor.John.getHealth());

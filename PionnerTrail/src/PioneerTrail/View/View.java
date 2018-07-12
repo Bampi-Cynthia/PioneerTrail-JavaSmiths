@@ -2,7 +2,10 @@
  * SUPER CLASS VIEW
  */
 package PioneerTrail.View;
-import java.util.Scanner;
+
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import pionnertrail.PioneerTrail;
 
 /**
  * @author Elías
@@ -10,6 +13,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
 
     protected String promptMessage;
+
+    protected final BufferedReader keyboard = PioneerTrail.getInFile();
+    protected final PrintWriter console = PioneerTrail.getOutFile();
 
     public View() {
     }
@@ -32,28 +38,45 @@ public abstract class View implements ViewInterface {
         } while (endOfView != true);
 
     }
-
-    @Override
+   @Override
     public String getInputs() {
         return getInput(promptMessage);
     }
 
-    @Override
-    public String getInput(String promptMessage) {
-        Scanner scan;
-        scan = new Scanner(System.in);
-        String input = "";
+    public String getInput(String prompt) {
         boolean valid = false;
-        while (valid == false) {
-            System.out.println(promptMessage);
-            input = scan.nextLine();
-            input = input.trim();
-            if (input.length() < 1) {
-                System.out.println("You must enter a non-blank value");
+        String selection = null;
+        try {
+            //while a valid name has not been retrieved
+            while (!valid) {
+            
+            selection = this.keyboard.readLine();
+            selection = selection.trim();
+            if(prompt != null){
+            System.out.println(prompt);
+            }
+            if (selection.length() < 1) { //blank value entered
+                System.out.println("You must enter a value");
                 continue;
             }
-            valid = true;
+            break;
+            }
+        } catch (Exception e) {
+            System.out.println("Error readin input: " + e.getMessage());
         }
-        return input;
+        return selection;//return the name
     }
-}
+//        String input = "";
+//        boolean valid = false;
+//        while (valid == false) {
+//            System.out.println(promptMessage);
+//            input = scan.nextLine();
+//            input = input.trim();
+//            if (input.length() < 1) {
+//                System.out.println("You must enter a non-blank value");
+//                continue;
+//            }
+//            valid = true;
+//        }
+//        return input;
+  }
