@@ -70,7 +70,7 @@ public class GameControl {
   public static void getSavedGame(String filePath) 
                        throws GameControlException {
        Game game = null;
-       try( FileInputStream fips = new FileInputStream(filePath)) {
+       try(FileInputStream fips = new FileInputStream(filePath)) {
            ObjectInputStream input = new ObjectInputStream(fips);
            
            game = (Game) input.readObject();//read the game object from file
@@ -80,8 +80,26 @@ public class GameControl {
        }
        //close the output file
        PioneerTrail.setCurrentGame(game);//save Game
+ }
+  //GETGAME METHOD
+  public static Game getGame(Game game, String filePath) throws GameControlException{
+    if(filePath == null){
+        throw new GameControlException("Invalid file path");
+    }
+    
+     try(FileInputStream fips = new FileInputStream(filePath)) {
+           ObjectInputStream input = new ObjectInputStream(fips);
+           
+           game = (Game) input.readObject();//read the game object from file
        }
-
+       catch (Exception e) {
+           throw new GameControlException(e.getMessage());
+       }
+       //close the o       PioneerTrail.setCurrentGame(game);//save Game
+       PioneerTrail.setCurrentGame(game);//save Game
+// PioneerTrail.setPlayer(game.getPlayer());
+ return game;
+  }
 }
 
         
