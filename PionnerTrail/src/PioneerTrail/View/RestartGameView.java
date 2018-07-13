@@ -21,10 +21,9 @@ class RestartGameView extends View {
             GameControl.getSavedGame(inputs);
             GameMenuView gameMenuView = new GameMenuView();
             gameMenuView.display();
-            return true;
         } catch (GameControlException ex) {
-            Logger.getLogger(RestartGameView.class.getName()).log(Level.SEVERE, null, ex);
+            ErrorView.display(RestartGameView.class.getName(), ex.getMessage()); 
         }
-        return false;
+        return true;
     }
 }
