@@ -49,12 +49,11 @@ public abstract class View implements ViewInterface {
         try {
             //while a valid name has not been retrieved
             while (!valid) {
-            
+            if(prompt != null){
+            this.console.println(prompt);
+            }
             selection = this.keyboard.readLine();
             selection = selection.trim();
-            if(prompt != null){
-            this.console.println(promptMessage);
-            }
             if (selection.length() < 1) { //blank value entered
                 ErrorView.display(this.getClass().getName(), "You must enter a valid name");
                 continue;
