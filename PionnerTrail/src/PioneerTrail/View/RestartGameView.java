@@ -2,8 +2,6 @@ package PioneerTrail.View;
 
 import PioneerTrail.control.GameControl;
 import PioneerTrail.exceptions.GameControlException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author Elías
