@@ -95,7 +95,6 @@ public class GameControl {
        catch (Exception e) {
            throw new GameControlException(e.getMessage());
        }
-       //close the o       PioneerTrail.setCurrentGame(game);//save Game
        PioneerTrail.setCurrentGame(game);//save Game
 // PioneerTrail.setPlayer(game.getPlayer());
  return game;
