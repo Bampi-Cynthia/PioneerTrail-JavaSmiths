@@ -27,18 +27,18 @@ public class ResourceView extends View {
 
     @Override
     public boolean doAction(String inputs) {
+        inputs = inputs.toUpperCase();
         switch (inputs) {
             case "D":
                 viewInventoryReport();
                 break;
 
             case "P":
-
                 printInventoryReport();
                 break;
 
             default:
-                System.out.println("Invalid selection, try again");
+                ErrorView.display(this.getClass().getName(), "Invalid selection. Please, try again");
         }
         return false;
 
@@ -107,7 +107,7 @@ public class ResourceView extends View {
     public void viewInventoryReport() {
         ArrayList<Resource> resources = PioneerTrail.getCurrentGame().getResources();
         //print title and column headings
-        System.out.println("\n\n        Inventory Report       ");
+        System.out.println("\n\n                Inventory Report       ");
         System.out.printf("\n%15s%10s%10s%10s", "Name", "Type", "Quantity", "Weight");
         System.out.printf("\n%15s%10s%10s%10s", "----", "----", "--------", "------");
         //print the name, type, quantity, and weight of each item
@@ -126,7 +126,7 @@ public class ResourceView extends View {
         String outputLocation = getInput("Enter a file name: ");
         try (PrintWriter out = new PrintWriter(outputLocation)) {
             //print title and column headings
-            out.println("\r\n        Inventory Report       ");
+            out.println("\r\n                       Inventory Report        ");
             out.printf("\r\n%15s%10s%10s%10s", "Name", "Type", "Quantity", "Weight");
             out.printf("\r\n%15s%10s%10s%10s", "----", "----", "--------", "------");
             //print the name, type, quantity, and weight of each item
@@ -136,6 +136,9 @@ public class ResourceView extends View {
                         resource.getQuantity(),
                         resource.getWeight()
                 );
+            }
+            if(outputLocation != null){
+                System.out.println("You saved the Inventory Report with success!");
             }
         } catch (IOException ex) {
             System.out.println("I/O Error: " + ex.getMessage());
