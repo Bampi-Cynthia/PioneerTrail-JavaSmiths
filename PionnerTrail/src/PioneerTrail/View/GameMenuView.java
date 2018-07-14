@@ -22,6 +22,7 @@ class GameMenuView extends View {
                 + "===============================\n"
                 + "V - View Map\n"
                 + "R - View Resources\n"
+                + "L - List Actors\n"
                 + "G - Save the Game\n"
                 + "A - View Actors\n"
                 + "T - Test Wagon Weight\n"
@@ -42,7 +43,10 @@ class GameMenuView extends View {
             case "R":
                 ViewResources();
                 break;
-                case "G":
+            case "L":
+                ActorList();
+                break;
+            case "G":
                 saveGame();
                 break;
             case "H":
@@ -124,5 +128,10 @@ class GameMenuView extends View {
     private void saveGame() {
         SaveGameView saveGameView = new SaveGameView();
         saveGameView.display();
+    }
+
+    private void ActorList() {
+        ActorReportView actorReportView = new ActorReportView();
+         actorReportView.display();
     }
 }
