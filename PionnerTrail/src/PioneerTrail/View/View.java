@@ -26,7 +26,7 @@ public abstract class View implements ViewInterface {
 
     @Override
     public void display() {
-        boolean endOfView = false;
+        boolean endOfView;
         String inputs;
         do {
             inputs = this.getInputs();
@@ -35,7 +35,11 @@ public abstract class View implements ViewInterface {
             }
 
             endOfView = doAction(inputs);
-        } while (endOfView != true);
+            if (PioneerTrail.getCurrentGame().isGameOver()){
+                return;
+            }
+      
+        } while(endOfView != true);
 
     }
    @Override

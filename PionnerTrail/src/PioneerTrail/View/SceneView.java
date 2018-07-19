@@ -32,12 +32,16 @@ public class SceneView extends View {
 //       if(resources.size() > 0){
 //           Resource resource = resources.get(0);
 //           menuString += "P - pick up " + resource.getName() + "\n";
-//       }
+ //    }
        Resource resource = scene.getResource();
        if (resource !=null){
             menuString += "P - pick up " + resource.getName() + "\n";
        }
-           
+       
+       Question question = scene.getQuestion();
+       if (question!= null){
+           menuString += "A - Answer Question: " + question.getQuestion() + "\n";
+       }    
        menuString += "Q - quit \n";
     }
     
@@ -60,6 +64,21 @@ public class SceneView extends View {
 //                   scene.getResources().remove(scene.getResources().get(0));
 //                   scene.getResources().clear();
 //               }
+               break;
+           case "A": 
+               Question question = scene.getQuestion();
+               if (question != null){
+                   String questionMenu = question.getQuestion() + "\n";
+                   questionMenu += "   1-" + question.getAnswer1() + "\n";
+                   questionMenu += "   2-" + question.getAnswer2() + "\n";
+                   questionMenu += "   3-" + question.getAnswer3() + "\n";
+                   questionMenu += "   4-" + question.getAnswer4() + "\n";
+                   String answer = getInput(questionMenu);
+                   int answerInt = Integer.parseInt(answer);
+                   if (answerInt == question.getConrrectAnswer()){
+                       System.out.println("Your Answer is Correct!"); 
+                   }
+               }
                break;
            case "Q":
                return true;

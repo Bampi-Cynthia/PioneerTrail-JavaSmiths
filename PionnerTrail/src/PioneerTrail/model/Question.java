@@ -15,27 +15,20 @@ public class Question implements Serializable{
     
 //atributes
     private String question;
-    private String conrrectAnswer;
+    private int conrrectAnswer;
     private String answer1;
     private String answer2;
     private String answer3;
     private String answer4;
     
 //relationship with other classes
-    private ArrayList<Scene> scenes = new ArrayList<Scene>();
+    
     
 //default constructor
     public Question(){
     }
     
-//getters and setters for all the atributes
-    public ArrayList<Scene> getScenes() {
-        return scenes;
-    }
 
-    public void setScenes(ArrayList<Scene> scenes) {
-        this.scenes = scenes;
-    }
 
     public String getQuestion() {
         return question;
@@ -45,11 +38,11 @@ public class Question implements Serializable{
         this.question = question;
     }
 
-    public String getConrrectAnswer() {
+    public int getConrrectAnswer() {
         return conrrectAnswer;
     }
 
-    public void setConrrectAnswer(String conrrectAnswer) {
+    public void setConrrectAnswer(int conrrectAnswer) {
         this.conrrectAnswer = conrrectAnswer;
     }
 

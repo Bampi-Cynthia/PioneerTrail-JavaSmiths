@@ -18,14 +18,24 @@ public class Game implements Serializable{
     private int milesTraveled;
     // relationships between classes
     private Player player;
+    private boolean gameOver; 
     private ArrayList<Actor> actors = new ArrayList<Actor>();
     private ArrayList<Resource> resources;
     private Wagon wagon;
     private Map map;
     // dafault constructor
     public Game() {
+        gameOver = false;
     }
     // getter and setter
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
+    public void setGameOver(boolean gameOver) {
+        this.gameOver = gameOver;
+    }
 
     public Map getMap() {
         return map;
