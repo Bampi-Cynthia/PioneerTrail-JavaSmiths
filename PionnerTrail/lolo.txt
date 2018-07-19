@@ -1,0 +1,12 @@
+
+
+        Inventory Report       
+
+Name            Type  Quantity    Weight
+----            ----  --------    ------
+flour           food        10         5
+hammer         tools         1         2
+Wagon Wheel     parts         1        10
+Wood            wood       100        30
+Ammo            ammo        70         5
+Shoes          shoes        10         8
