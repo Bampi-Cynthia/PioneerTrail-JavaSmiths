@@ -51,6 +51,7 @@ public class Scene implements Serializable {
     
 // default constructor
     public Scene(){
+        this.question = null;
 }
 
 //    public ArrayList<Actor> getActors() {

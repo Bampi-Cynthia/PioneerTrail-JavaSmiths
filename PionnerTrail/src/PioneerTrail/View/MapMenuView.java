@@ -30,8 +30,11 @@ public class MapMenuView extends View {
                 displayMap();
                 break;
             case "M":
-                if(!moveToNewLocation())
+                if(!moveToNewLocation()){
                     System.out.println("You have arrived at Zion!!");
+                    PioneerTrail.getCurrentGame().setGameOver(true);
+                    return true;
+                }
                 break;
             default:
                 ErrorView.display(this.getClass().getName(), "Select between the menu choices");
@@ -112,6 +115,11 @@ public class MapMenuView extends View {
         map.setCurrentRow(currentRow);
         map.setCurrentColumn(currentColumn);
         displayMap();
+        if (currentRow == map.getRowCount() - 1){
+            if (currentColumn ==map.getColumnCount() -1){
+                return false;
+            }
+        }
         return true;
     }
 }
