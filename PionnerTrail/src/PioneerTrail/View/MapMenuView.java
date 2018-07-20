@@ -1,5 +1,6 @@
 package PioneerTrail.View;
 
+import PioneerTrail.View.SceneView;
 import PioneerTrail.model.Game;
 import PioneerTrail.model.Location;
 import PioneerTrail.model.Map;
@@ -35,6 +36,8 @@ public class MapMenuView extends View {
                     PioneerTrail.getCurrentGame().setGameOver(true);
                     return true;
                 }
+                SceneView sceneView = new SceneView();
+                sceneView.display();
                 break;
             default:
                 ErrorView.display(this.getClass().getName(), "Select between the menu choices");
