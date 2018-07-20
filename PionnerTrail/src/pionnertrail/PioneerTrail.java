@@ -26,6 +26,7 @@ public class PioneerTrail {
 
     private static Game currentGame = null;
     private static Player player = null;
+    private static Wagon wagon = null;
 
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
@@ -65,10 +66,19 @@ public class PioneerTrail {
     public static Player getPlayer() {
         return player;
     }
-
+        
     public static void setPlayer(Player player) {
         PioneerTrail.player = player;
     }
+
+    public static Wagon getWagon() {
+        return wagon;
+    }
+
+    public static void setWagon(Wagon wagon) {
+        PioneerTrail.wagon = wagon;
+    }
+    
     private static PrintWriter logFile = null;
 
     //MAIN METHOD OF THE MAIN CLASS
