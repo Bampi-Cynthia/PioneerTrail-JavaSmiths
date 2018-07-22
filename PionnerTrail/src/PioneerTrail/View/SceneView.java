@@ -59,8 +59,8 @@ public class SceneView extends View {
         if (scene == null) {
             return true;
         }
-        inputs.toUpperCase();
-        switch (inputs) {
+        String menuItem = inputs.toUpperCase();
+        switch (menuItem) {
             case "P":
                 if (scene.getResource() != null) {
                     PioneerTrail.getCurrentGame().getResources().add(scene.getResource());
@@ -72,6 +72,7 @@ public class SceneView extends View {
 //                   scene.getResources().clear();
 //               }
                 break;
+                
             case "A":
                 Player player = PioneerTrail.getPlayer();
                 int currentHealth = player.getHealth();
@@ -101,11 +102,12 @@ public class SceneView extends View {
                         return true;
                     }
                 }
+                
                 break;
             case "Q":
                 return true;
         }
         promptMessage = getSceneMenu();
-        return false;
+        return true;
     }
 }

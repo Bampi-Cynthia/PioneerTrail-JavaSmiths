@@ -1,9 +1,12 @@
 package PioneerTrail.View;
 
 import PioneerTrail.View.SceneView;
+import PioneerTrail.control.MapControl;
 import PioneerTrail.model.Game;
 import PioneerTrail.model.Location;
 import PioneerTrail.model.Map;
+import PioneerTrail.model.Scene;
+import PioneerTrail.model.SceneType;
 import pionnertrail.PioneerTrail;
 
 /**
@@ -18,7 +21,7 @@ public class MapMenuView extends View {
                 + "D - Display Map\n"
                 + "M - Move To Next Location\n"
                 + "P - Print Report\n"
-                + "Q - Quit\n"
+                + "E - Exit\n"
                 + "Please, Make a choice:\n");
     }
 
@@ -28,7 +31,7 @@ public class MapMenuView extends View {
         String menuItem = inputs.toUpperCase();
         switch (menuItem) {
             case "D":
-                displayMap();
+                displayMap();      
                 break;
             case "M":
                 if(!moveToNewLocation()){

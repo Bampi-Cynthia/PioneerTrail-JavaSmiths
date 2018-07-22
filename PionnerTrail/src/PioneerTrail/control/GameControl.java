@@ -37,6 +37,7 @@ public class GameControl {
         
         Game game = new Game();
         Wagon wagon = new Wagon();
+        player.setHealth(100);
         wagon.setCapacity(500);
         wagon.setCurrentWeight(50);
         wagon.setIntegrity(100);

@@ -16,11 +16,13 @@ import pionnertrail.PioneerTrail;
  */
 class GameMenuView extends View {
 
+    private boolean firstVisit;
+
     public GameMenuView() {
         super("===============================\n"
                 + "            Game Menu          \n"
                 + "===============================\n"
-                + "V - View Map\n"
+                + "V - Navoo - View Map\n"
                 + "R - View Resources\n"
                 + "L - List Actors\n"
                 + "G - Save the Game\n"
@@ -30,6 +32,7 @@ class GameMenuView extends View {
                 + "H - Get help on how to play the game\n"
                 + "E - Exit\n"
                 + "Please, make your choice");
+        firstVisit = true;
     }
 
     @Override
@@ -71,8 +74,14 @@ class GameMenuView extends View {
     }
 
     private void ViewMap() {
+        if (firstVisit == true) {
+            firstVisit = false;
+            SceneView sceneView = new SceneView();
+            sceneView.display();
+        }
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.display();
+
     }
 
     private void ViewResources() {
@@ -132,6 +141,6 @@ class GameMenuView extends View {
 
     private void ActorList() {
         ActorReportView actorReportView = new ActorReportView();
-         actorReportView.display();
+        actorReportView.display();
     }
 }

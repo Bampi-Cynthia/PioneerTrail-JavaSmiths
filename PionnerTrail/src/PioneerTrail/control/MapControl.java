@@ -76,6 +76,7 @@ public class MapControl {
 
     public static Scene[] createScenes() {
         Scene[] scenes = new Scene[25];
+
 //Scene 1 NAUVOO
         scenes[SceneType.Nauvoo.ordinal()] = new Scene();
 
@@ -90,7 +91,7 @@ public class MapControl {
         question.setAnswer4("Nile River");
         question.setConrrectAnswer(3);
         scenes[SceneType.Nauvoo.ordinal()].setQuestion(question);
-        
+
 //Scene 2 SUGAR CREEK
         scenes[SceneType.SugarCreek.ordinal()] = new Scene();
 
@@ -106,6 +107,7 @@ public class MapControl {
         question.setConrrectAnswer(1);
         scenes[SceneType.SugarCreek.ordinal()].setQuestion(question);
         
+
 //Scene 3 RICHARDSON'S POINT
         scenes[SceneType.RichardsonsPoint.ordinal()] = new Scene();
 
@@ -121,6 +123,7 @@ public class MapControl {
         question.setConrrectAnswer(3);
         scenes[SceneType.RichardsonsPoint.ordinal()].setQuestion(question);
         
+
 //Scene 4 CHARITON RIVER CROSSING
         scenes[SceneType.CharitonRiverCrossing.ordinal()] = new Scene();
 
@@ -134,6 +137,8 @@ public class MapControl {
         question.setAnswer3("Richardson's Point");
         question.setAnswer4("Missouri Crossing");
         question.setConrrectAnswer(2);
+        scenes[SceneType.CharitonRiverCrossing.ordinal()].setQuestion(question);
+
 //Scene 5 LOCUST CREEK
         scenes[SceneType.LocustCreek.ordinal()] = new Scene();
 
@@ -147,6 +152,8 @@ public class MapControl {
         question.setAnswer3("Chile");
         question.setAnswer4("Lotust Creek");
         question.setConrrectAnswer(4);
+        scenes[SceneType.LocustCreek.ordinal()].setQuestion(question);
+
 //Scene 6 GARDEN GROVE
         scenes[SceneType.GardenGrove.ordinal()] = new Scene();
 
@@ -160,6 +167,8 @@ public class MapControl {
         question.setAnswer3("Chile");
         question.setAnswer4("Lotust Creek");
         question.setConrrectAnswer(4);
+        scenes[SceneType.GardenGrove.ordinal()].setQuestion(question);
+
 //Scene 7 NISHNABOTNA RIVER
         scenes[SceneType.NishnabotnaRiver.ordinal()] = new Scene();
 
@@ -173,6 +182,8 @@ public class MapControl {
         question.setAnswer3("Amazon River");
         question.setAnswer4("Rio Grande River");
         question.setConrrectAnswer(1);
+        scenes[SceneType.NishnabotnaRiver.ordinal()].setQuestion(question);
+
 //Scene 8 GRAND ENCAMPMENT
         scenes[SceneType.GrandEncampment.ordinal()] = new Scene();
 
@@ -186,6 +197,8 @@ public class MapControl {
         question.setAnswer3("GrandEncampment");
         question.setAnswer4("Wasatch Mountain");
         question.setConrrectAnswer(3);
+        scenes[SceneType.GrandEncampment.ordinal()].setQuestion(question);
+
 //Scene 9 COUNCIL BLUFFS
         scenes[SceneType.CouncilBluffs.ordinal()] = new Scene();
 
@@ -199,6 +212,8 @@ public class MapControl {
         question.setAnswer3("CouncilBluffs");
         question.setAnswer4("Jerusalem");
         question.setConrrectAnswer(3);  
+        scenes[SceneType.CouncilBluffs.ordinal()].setQuestion(question);
+
 //Scene 10 COUNCIL BLUFFS
         scenes[SceneType.WinterQuarters.ordinal()] = new Scene();
 
@@ -211,7 +226,9 @@ public class MapControl {
         question.setAnswer2("Winter Quarters");
         question.setAnswer3("Holand");
         question.setAnswer4("Mexico City");
-        question.setConrrectAnswer(2);  
+        question.setConrrectAnswer(2); 
+        scenes[SceneType.WinterQuarters.ordinal()].setQuestion(question);
+
 //Scene 11 ELKRORN RIVER CROSSING
         scenes[SceneType.ElkhornRiverCrossing.ordinal()] = new Scene();
 
@@ -225,6 +242,8 @@ public class MapControl {
         question.setAnswer3("Mekong");
         question.setAnswer4("Rio Grande River");
         question.setConrrectAnswer(1); 
+        scenes[SceneType.ElkhornRiverCrossing.ordinal()].setQuestion(question);
+        
 //Scene 12 PLATTE RIVER
         scenes[SceneType.PlatteRiver.ordinal()] = new Scene();
 
@@ -238,6 +257,8 @@ public class MapControl {
         question.setAnswer3("Oder");
         question.setAnswer4("Sutlej");
         question.setConrrectAnswer(2); 
+        scenes[SceneType.PlatteRiver.ordinal()].setQuestion(question);
+        
 //Scene 13 PLATTE RIVER
         scenes[SceneType.FortKearny.ordinal()] = new Scene();
 
@@ -251,6 +272,7 @@ public class MapControl {
         question.setAnswer3("Zion Zion");
         question.setAnswer4("Saint George");
         question.setConrrectAnswer(2); 
+        
 //Scene 14 CONFLUENCE POINT
         scenes[SceneType.ConfluencePoint.ordinal()] = new Scene();
 
@@ -264,6 +286,8 @@ public class MapControl {
         question.setAnswer3("Egypt");
         question.setAnswer4("Confluence Point");
         question.setConrrectAnswer(4);
+        scenes[SceneType.ConfluencePoint.ordinal()].setQuestion(question);
+        
 //Scene 15 ASH HOLLOW
         scenes[SceneType.AshHollow.ordinal()] = new Scene();
 
@@ -277,6 +301,8 @@ public class MapControl {
         question.setAnswer3("Brave Camp");
         question.setAnswer4("Tent Camp");
          question.setConrrectAnswer(2);
+         scenes[SceneType.AshHollow.ordinal()].setQuestion(question);
+         
 //Scene 16 CHIMNEY ROCKS
         scenes[SceneType.ChimneyRock.ordinal()] = new Scene();
 
@@ -289,7 +315,9 @@ public class MapControl {
         question.setAnswer2("Lava Cake");
         question.setAnswer3("Moab");
         question.setAnswer4("Rocky Mountain");
-         question.setConrrectAnswer(1);
+        question.setConrrectAnswer(1);
+        scenes[SceneType.ChimneyRock.ordinal()].setQuestion(question);
+        
 //Scene 17 SCOTTS BLUFF
         scenes[SceneType.ScottsBluff.ordinal()] = new Scene();
 
@@ -302,7 +330,9 @@ public class MapControl {
         question.setAnswer2("Hillary Duff");
         question.setAnswer3("Volga");
         question.setAnswer4("Oder");
-         question.setConrrectAnswer(1);
+        question.setConrrectAnswer(1);
+        scenes[SceneType.ScottsBluff.ordinal()].setQuestion(question);
+        
 //Scene 18 FORT LARAMIE
         scenes[SceneType.FortLaramie.ordinal()] = new Scene();
 
@@ -315,7 +345,9 @@ public class MapControl {
         question.setAnswer2("West Jordan");
         question.setAnswer3("Fort Laramie");
         question.setAnswer4("Nephi");
-         question.setConrrectAnswer(3);
+        question.setConrrectAnswer(3);
+        scenes[SceneType.FortLaramie.ordinal()].setQuestion(question);
+        
 //Scene 19 SWEETWATER RIVER
         scenes[SceneType.SweetwaterRiver.ordinal()] = new Scene();
 
@@ -328,7 +360,9 @@ public class MapControl {
         question.setAnswer2("Brahmaputra");
         question.setAnswer3("Guadiana");
         question.setAnswer4("Patomic Riveri");
-         question.setConrrectAnswer(1);
+        question.setConrrectAnswer(1);
+        scenes[SceneType.SweetwaterRiver.ordinal()].setQuestion(question);
+        
 //Scene 20 INDEPENDENCE ROCK
         scenes[SceneType.IndependenceRock.ordinal()] = new Scene();
 
@@ -341,7 +375,9 @@ public class MapControl {
         question.setAnswer2("Hard Rock");
         question.setAnswer3("Moab");
         question.setAnswer4("Rocky Mountain");
-         question.setConrrectAnswer(1);
+        question.setConrrectAnswer(1);
+        scenes[SceneType.IndependenceRock.ordinal()].setQuestion(question);
+        
 //Scene 21 FORT BRIDGER
         scenes[SceneType.FortBridger.ordinal()] = new Scene();
 
@@ -354,7 +390,9 @@ public class MapControl {
         question.setAnswer2("New Zeland");
         question.setAnswer3("Fort Bridger");
         question.setAnswer4("Bora Bora");
-         question.setConrrectAnswer(3);
+        question.setConrrectAnswer(3);
+        scenes[SceneType.FortBridger.ordinal()].setQuestion(question);
+        
 //Scene 22 FORT BRIDGER
         scenes[SceneType.EchoCanyon.ordinal()] = new Scene();
 
@@ -367,7 +405,9 @@ public class MapControl {
         question.setAnswer2("Catarat Canyon");
         question.setAnswer3("High Canyon");
         question.setAnswer4("Echo Canyon");
-         question.setConrrectAnswer(4);
+        question.setConrrectAnswer(4);
+        scenes[SceneType.EchoCanyon.ordinal()].setQuestion(question);
+        
 //Scene 23 GOLDEN PASS ROAD
         scenes[SceneType.GoldenPassRoad.ordinal()] = new Scene();
 
@@ -380,7 +420,9 @@ public class MapControl {
         question.setAnswer2("Golden Pass Road");
         question.setAnswer3("Legacy");
         question.setAnswer4("Interstate -15");
-         question.setConrrectAnswer(2);
+        question.setConrrectAnswer(2);
+        scenes[SceneType.GoldenPassRoad.ordinal()].setQuestion(question);
+        
 //Scene 24 GOLDEN PASS ROAD
         scenes[SceneType.EmigrationCanyon.ordinal()] = new Scene();
 
@@ -393,7 +435,9 @@ public class MapControl {
         question.setAnswer2("Death Valley");
         question.setAnswer3("Rocky Mountain");
         question.setAnswer4("Wasatch");
-         question.setConrrectAnswer(1);
+        question.setConrrectAnswer(1);
+        scenes[SceneType.EmigrationCanyon.ordinal()].setQuestion(question);
+        
 //Scene 25 ZION
         scenes[SceneType.Zion.ordinal()] = new Scene();
 
@@ -407,7 +451,7 @@ public class MapControl {
         question.setAnswer3("Zion");
         question.setAnswer4("Milan");
         question.setConrrectAnswer(1);
-
+        scenes[SceneType.Zion.ordinal()].setQuestion(question);
         return scenes;
     }
 

@@ -28,8 +28,6 @@ public class Question implements Serializable{
     public Question(){
     }
     
-
-
     public String getQuestion() {
         return question;
     }
