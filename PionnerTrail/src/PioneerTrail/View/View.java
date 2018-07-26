@@ -69,17 +69,4 @@ public abstract class View implements ViewInterface {
         }
         return selection;//return the name
     }
-//        String input = "";
-//        boolean valid = false;
-//        while (valid == false) {
-//            System.out.println(promptMessage);
-//            input = scan.nextLine();
-//            input = input.trim();
-//            if (input.length() < 1) {
-//                System.out.println("You must enter a non-blank value");
-//                continue;
-//            }
-//            valid = true;
-//        }
-//        return input;
   }

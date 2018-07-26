@@ -20,7 +20,7 @@ public class ResourceView extends View {
                 + "===============================\n"
                 + "D - Display Resource List\n"
                 + "P - Print Report\n"
-                + "Q - Quit \n"
+                + "E - Exit \n"
                 + "Please, make your choice");
        // promptMessage = getResourceListString();
     }

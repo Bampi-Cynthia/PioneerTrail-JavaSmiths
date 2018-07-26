@@ -32,13 +32,7 @@ public class SceneView extends View {
             menuString = "Welcome to " + scene.getName() + "\n";
             menuString += "Scene symbol = " + scene.getSymbol() + "\n";
             menuString += scene.getDescription() + "\n";
-//      ArrayList<Question> questions = scene.getQuestions();
-//       ArrayList<Actor> actors = scene.getActors();
-//       ArrayList<Resource> resources = scene.getResources();
-//       if(resources.size() > 0){
-//           Resource resource = resources.get(0);
-//           menuString += "P - pick up " + resource.getName() + "\n";
-            //    }
+
             Resource resource = scene.getResource();
             if (resource != null) {
                 menuString += "P - pick up " + resource.getName() + "\n";
